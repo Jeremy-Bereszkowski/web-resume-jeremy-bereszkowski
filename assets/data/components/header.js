@@ -1,31 +1,7 @@
-import URL from "../../strings/urls";
+import {fullName} from "../global";
 
-const HeaderLinkData = [
-    {
-        core: {
-            key: "Home",
-            link: URL.LANDING_PAGE,
-            as: URL.ROOT,
-        },
-    },
-    {
-        core: {
-            key: "Education",
-            link: "",
-        },
-    },
-    {
-        core: {
-            key: "Experience",
-            link: "",
-        },
-    },
-    {
-        core: {
-            key: "Knowledge Areas",
-            link: "",
-        },
-    },
-]
+const HeaderData = {
+    brand: fullName,
+}
 
-export default HeaderLinkData
+export default HeaderData

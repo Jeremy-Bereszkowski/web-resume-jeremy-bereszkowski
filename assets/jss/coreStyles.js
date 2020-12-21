@@ -1,5 +1,5 @@
 import Colours from "../strings/colours";
-import {blackColor, grayColor, hexToRgb, title, whiteColor} from "./nextjs-material-kit-pro";
+import {blackColor, hexToRgb, whiteColor} from "./nextjs-material-kit-pro";
 
 const extraSmallFont = {
     fontSize: "calc(16px + (20 - 16) * ((100vw - 300px) / (3000 - 300)))"
@@ -45,16 +45,14 @@ const sectionText = {
 const sectionHeaderText = {
     ...mediumFont,
     ...sectionText,
-    fontWeight: "350",
+    fontWeight: "400",
 }
 
 const sectionSubHeaderText = {
     ...smallFont,
     ...sectionText,
-    fontWeight: "250",
+    fontWeight: "300",
 }
-
-
 
 const darkColor = {
     "&:before": {
@@ -70,12 +68,6 @@ const darkColor = {
         top: "0",
         content: "''"
     }
-}
-
-const blackHrThin = {
-    marginTop: "4vh",
-    marginBottom: "4vh",
-    borderTop: "1px solid black"
 }
 
 const greenHrThick = {
@@ -98,6 +90,5 @@ export {
 
     darkColor,
 
-    blackHrThin,
     greenHrThick,
 }

@@ -68,6 +68,10 @@ export default function AboutMe(props) {
                                 </Grid>
                             ))
                         }
+                        <Grid item>
+                            <br/>
+                            <br/>
+                        </Grid>
                     </Grid>
                 </Grid>
                 <Grid item xs={12} md={3}>

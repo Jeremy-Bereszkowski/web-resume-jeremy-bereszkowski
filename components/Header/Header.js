@@ -14,6 +14,7 @@ import {
   defaultFont, grayColor,
   hexToRgb, whiteColor,
 } from "assets/jss/nextjs-material-kit-pro";
+import HeaderData from "assets/data/components/header";
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -135,7 +136,7 @@ export default function Header(props) {
       <AppBar className={appBarClasses}>
         <div className={classes.container}>
           <h2 className={classes.title}>
-            Jeremy Bereszkowski
+            {HeaderData.brand}
           </h2>
         </div>
       </AppBar>

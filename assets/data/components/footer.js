@@ -1,13 +1,13 @@
-import {address, email, headerString, phone} from "../global";
+import {address, email, fullName, phone} from "../global";
 
 const FooterData = {
     left: {
-        header: headerString,
+        header: fullName,
         address: address,
     },
     right: {
-        email: email,
-        phone: phone,
+        email: "Email: " + email,
+        phone: "Mobile: " + phone,
     }
 }
 

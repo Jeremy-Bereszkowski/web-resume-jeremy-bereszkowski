@@ -12,20 +12,11 @@ import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles({
     footer: {
-        paddingTop: "40px",
+        paddingTop: "70px",
         paddingBottom: "40px",
         paddingRight: "25px",
         paddingLeft: "25px",
-        marginRight: "auto",
-        marginLeft: "auto",
         width: "100%",
-        "& ul": {
-            marginTop: "auto",
-            marginBottom: "auto"
-        },
-        "& ul li": {
-            display: "inline-block",
-        },
         "& h4, & h5": {
             color: whiteColor,
             textDecoration: "none"
@@ -33,7 +24,6 @@ const useStyles = makeStyles({
     },
     footerBrand: {
         color: Colours.green,
-        fontFamily: "Roboto Slab,Times New Roman,serif",
         margin: "0",
     },
     dark: {
@@ -137,9 +127,9 @@ export default function Footer() {
                         alignItems={"flex-end"}
                     >
                         <Grid item>
-                            <h3 className={classes.footerBrand}>
+                            <h5 className={classes.footerBrand}>
                                 {FooterData.right.email}
-                            </h3>
+                            </h5>
                         </Grid>
                         <Grid item>
                             <h5 className={classes.footerBrand}>

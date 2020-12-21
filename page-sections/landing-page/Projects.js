@@ -20,6 +20,7 @@ export default function EducationAndExperienceTimeline(props) {
         <HeaderSubHeaderBody
             header={"Product and Projects"}
             subHeader={"My previous work"}
+            headerColor={"light"}
         >
             <VerticalTimeline>
                 <VerticalTimelineElement
