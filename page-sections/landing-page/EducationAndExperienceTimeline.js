@@ -26,7 +26,7 @@ export default function EducationAndExperienceTimeline(props) {
                     className="vertical-timeline-element--education"
                     date="2016-2022"
                     iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-                    icon={<SchoolIcon />}
+                    icon={<WorkIcon />}
                 >
                     <h3 className="vertical-timeline-element-title">M. Brodribb Pty Ltd</h3>
                     <h4 className="vertical-timeline-element-subtitle">Office Manager</h4>

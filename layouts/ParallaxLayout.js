@@ -20,7 +20,7 @@ const useStyles = makeStyles({
         marginRight: "auto",
         marginLeft: "auto",
         width: "100%",
-        maxWidth: "60%",
+        maxWidth: "1200px",
         zIndex: "2",
         border: "solid 2px " + Colours.green
     },

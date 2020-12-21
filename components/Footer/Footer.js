@@ -12,10 +12,10 @@ import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles({
     footer: {
-        paddingTop: "20px",
-        paddingBottom: "20px",
-        paddingRight: "15px",
-        paddingLeft: "15px",
+        paddingTop: "40px",
+        paddingBottom: "40px",
+        paddingRight: "25px",
+        paddingLeft: "25px",
         marginRight: "auto",
         marginLeft: "auto",
         width: "100%",
@@ -80,11 +80,11 @@ export default function Footer() {
                 container
                 spacing={3}
                 direction={"row"}
-                justify={"center"}
+                justify={"space-around"}
                 alignContent={"center"}
                 alignItems={"center"}
             >
-                <Grid item xs={12} sm={12} md={4}>
+                <Grid item>
                     <Grid
                         container
                         direction={"column"}
@@ -103,7 +103,7 @@ export default function Footer() {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item xs={12} sm={12} md={4}>
+                <Grid item>
                     <Grid
                         container
                         direction={"row"}
@@ -129,7 +129,7 @@ export default function Footer() {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item xs={12} sm={12} md={4}>
+                <Grid item>
                     <Grid
                         container
                         direction={"column"}

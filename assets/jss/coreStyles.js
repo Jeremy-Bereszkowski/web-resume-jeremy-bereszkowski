@@ -51,7 +51,7 @@ const sectionHeaderText = {
 const sectionSubHeaderText = {
     ...smallFont,
     ...sectionText,
-    fontWeight: "150",
+    fontWeight: "250",
 }
 
 

@@ -27,22 +27,22 @@ export default function LandingPage(props) {
                 <MainContainerLayout>
                     <Grid
                         container
-                        spacing={6}
+                        spacing={10}
                         direction={"row"}
                         alignContent={"center"}
                         justify={"center"}
                     >
                         <Grid item xs={12} sm={12} md={12} lg={12}>
-                            <AboutMe />
+                            <AboutMe data={data.aboutMe}/>
                         </Grid>
                         <Grid style={{backgroundColor: grayColor[12]}} item xs={12} sm={12} md={12} lg={12}>
-                            <EducationAndExperienceTimeline />
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={12} lg={12}>
                             <Projects />
                         </Grid>
-                        <Grid style={{backgroundColor: grayColor[7]}} item xs={12} sm={12} md={12} lg={12}>
+                        <Grid item xs={12} sm={12} md={12} lg={12}>
                             <SkillsAndTools />
+                        </Grid>
+                        <Grid style={{backgroundColor: grayColor[7]}} item xs={12} sm={12} md={12} lg={12}>
+                            <EducationAndExperienceTimeline />
                         </Grid>
                     </Grid>
                 </MainContainerLayout>

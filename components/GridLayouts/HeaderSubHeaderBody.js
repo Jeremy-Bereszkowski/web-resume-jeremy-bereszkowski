@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
     sectionHeaderText,
     sectionSubHeaderText,
     container: {
-        maxWidth: "40%",
+        maxWidth: "1600px",
         margin: "0 auto",
     }
 }))
@@ -35,6 +35,9 @@ export default function HeaderSubHeaderBody(props) {
                 <h2 className={classes.sectionSubHeaderText}>
                     {subHeader}
                 </h2>
+            </Grid>
+            <Grid item>
+                <br/>
             </Grid>
             <Grid item>
                 {children}
