@@ -1,15 +1,62 @@
 {
   "name": "web-resume-jeremy-bereszkowski",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
   "dependencies": {
-    "next": "10.0.3",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "@material-ui/core": "4.9.12",
+    "@material-ui/icons": "^4.9.1",
+    "@types/googlemaps": "3.39.4",
+    "@types/markerclustererplus": "2.1.33",
+    "@zeit/next-css": "1.0.1",
+    "@zeit/next-sass": "1.0.1",
+    "animate.css": "3.7.2",
+    "classnames": "2.2.6",
+    "firebase": "^8.0.2",
+    "google-maps-react": "^2.0.6",
+    "moment": "2.24.0",
+    "next": "9.3.6",
+    "next-compose-plugins": "2.2.0",
+    "next-images": "1.3.1",
+    "node-sass": "4.14.0",
+    "nouislider": "14.2.0",
+    "path": "0.12.7",
+    "prop-types": "15.7.2",
+    "react": "16.13.1",
+    "react-animate-on-scroll": "2.1.5",
+    "react-datetime": "2.16.3",
+    "react-dom": "16.13.1",
+    "react-google-maps": "9.4.5",
+    "react-image-gallery": "1.0.7",
+    "react-reveal": "^1.2.2",
+    "react-scale-text": "^1.2.2",
+    "react-slick": "0.25.2",
+    "react-spring": "^8.0.27",
+    "react-swipeable-views": "^0.13.9",
+    "react-tagsinput": "3.19.0",
+    "react-use-gesture": "^8.0.1",
+    "react-vertical-timeline-component": "^3.3.1",
+    "webpack": "4.43.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev -p 3005",
+    "build": "next build",
+    "start": "next start",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && rm -rf .next/ && npm install && npm run dev",
+    "compile-sass": "node-sass assets/scss/nextjs-material-kit-pro.scss assets/css/nextjs-material-kit-pro.css",
+    "minify-sass": "node-sass assets/scss/nextjs-material-kit-pro.scss assets/css/nextjs-material-kit-pro.min.css --output-style compressed",
+    "map-sass": "node-sass assets/scss/nextjs-material-kit-pro.scss assets/css/nextjs-material-kit-pro.css --source-map true"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": []
+  },
+  "optionalDependencies": {
+    "@types/googlemaps": "3.39.4",
+    "@types/markerclustererplus": "2.1.33"
   }
 }
