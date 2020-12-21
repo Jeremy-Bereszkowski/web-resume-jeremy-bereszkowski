@@ -27,9 +27,9 @@ export default function EducationAndExperienceTimeline(props) {
             <VerticalTimeline>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--education"
-                    contentStyle={{ background: grayColor[12], color: '#fff' }}
+                    contentStyle={{ background: grayColor[3], color: '#fff' }}
                     date="2018-present"
-                    iconStyle={{ background: Colours.green, color: '#fff' }}
+                    iconStyle={{ background: grayColor[12], color: '#fff' }}
                     icon={<WorkIcon />}
                 >
                     <h3 className="vertical-timeline-element-title">M. Brodribb Pty Ltd</h3>
@@ -42,9 +42,9 @@ export default function EducationAndExperienceTimeline(props) {
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--education"
-                    contentStyle={{ background: grayColor[12], color: '#fff' }}
+                    contentStyle={{ background: grayColor[3], color: '#fff' }}
                     date="2018-2019"
-                    iconStyle={{ background: grayColor[3], color: '#fff' }}
+                    iconStyle={{ background: grayColor[12], color: '#fff' }}
                     icon={<WorkIcon />}
                 >
                     <h3 className="vertical-timeline-element-title">Synergo Teknologi</h3>
@@ -60,7 +60,7 @@ export default function EducationAndExperienceTimeline(props) {
                     className="vertical-timeline-element--education"
                     contentStyle={{ background: grayColor[3], color: '#fff' }}
                     date="2016-present"
-                    iconStyle={{ background: Colours.green, color: '#fff' }}
+                    iconStyle={{ background: grayColor[10], color: '#fff' }}
                     icon={<SchoolIcon />}
                 >
                     <h3 className="vertical-timeline-element-title">Bachelor of Engineering (Computer Systems and Networking) with Honours/Bachelor of Computer Science</h3>
@@ -70,7 +70,7 @@ export default function EducationAndExperienceTimeline(props) {
                     className="vertical-timeline-element--work"
                     contentStyle={{ background: grayColor[3], color: '#fff' }}
                     date="2014"
-                    iconStyle={{ background: grayColor[12], color: '#fff' }}
+                    iconStyle={{ background: grayColor[10], color: '#fff' }}
                     icon={<SchoolIcon />}
                 >
                     <h3 className="vertical-timeline-element-title">The King David School</h3>

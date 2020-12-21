@@ -52,8 +52,11 @@ export default function EducationAndExperienceTimeline(props) {
                     iconStyle={{ background: grayColor[3], color: '#fff' }}
                     icon={<StarIcon />}
                 >
-                    <h3 className="vertical-timeline-element-title">The King David School</h3>
-                    <h4 className="vertical-timeline-element-subtitle">Melbourne, Australia</h4>
+                    <h3 className="vertical-timeline-element-title">MoveWell Physiotherapy</h3>
+                    <h4 className="vertical-timeline-element-subtitle">NextJS</h4>
+                    <p>
+                        A static SPA built in NextJS using MaterialUI for a Physiotherapy Practice based in Melbourne, Australia. Continuous integration is provided by GitHub and Vercel, hosting is provided by Vercel.
+                    </p>
                 </VerticalTimelineElement>
             </VerticalTimeline>
         </HeaderSubHeaderBody>
