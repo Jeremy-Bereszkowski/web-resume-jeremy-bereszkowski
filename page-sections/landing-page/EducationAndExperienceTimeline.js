@@ -28,7 +28,7 @@ export default function EducationAndExperienceTimeline(props) {
             subHeader={subHeader}
             headerColor={"light"}
         >
-            <VerticalTimeline animate={animate}>
+            <VerticalTimeline animate={!animate}>
                 {
                     cards.map((ele, key) => {
                         const icon = ele.icon === "school" ? <SchoolIcon/> : <WorkIcon />
