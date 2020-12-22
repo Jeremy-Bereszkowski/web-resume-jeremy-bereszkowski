@@ -8,6 +8,8 @@ import StarIcon from '@material-ui/icons/Star';
 
 import HeaderSubHeaderBody from "components/GridLayouts/HeaderSubHeaderBody";
 
+import useIsTouchDevice from "util/device-detect";
+
 import {grayColor} from "assets/jss/nextjs-material-kit-pro";
 
 import 'react-vertical-timeline-component/style.min.css';
@@ -17,13 +19,15 @@ const useStyles = makeStyles(theme => ({}))
 export default function EducationAndExperienceTimeline(props) {
     const classes = useStyles()
 
+    const animate = useIsTouchDevice() ? false : true
+
     return (
         <HeaderSubHeaderBody
             header={"Work Experience and Education"}
             subHeader={"My previous work history and education"}
             headerColor={"light"}
         >
-            <VerticalTimeline animate={false}>
+            <VerticalTimeline animate={animate}>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--education"
                     contentStyle={{ background: grayColor[3], color: '#fff' }}
