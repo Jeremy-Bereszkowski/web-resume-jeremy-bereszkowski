@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from "prop-types"
+
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 
 import {makeStyles} from "@material-ui/core/styles"
@@ -16,19 +18,78 @@ import 'react-vertical-timeline-component/style.min.css';
 
 const useStyles = makeStyles(theme => ({}))
 
-export default function EducationAndExperienceTimeline(props) {
+export default function Projects(props) {
+    const {header, subHeader, cards} = props
     const classes = useStyles()
 
     const animate = useIsTouchDevice() ? false : true
 
     return (
         <HeaderSubHeaderBody
-            header={"Product and Projects"}
-            subHeader={"My previous work"}
+            header={header}
+            subHeader={subHeader}
             headerColor={"light"}
         >
             <VerticalTimeline animate={animate}>
-                <VerticalTimelineElement
+                {
+                    cards.map((ele, key) => {
+                        return (
+                            <VerticalTimelineElement
+                                className="vertical-timeline-element--work"
+                                date="2020"
+                                iconStyle={{ background: grayColor[3], color: '#fff' }}
+                                icon={<StarIcon />}
+                                key={key}
+                            >
+                                <Grid
+                                    container
+                                    direction={"column"}
+                                    justify={"center"}
+                                    alignItems={"flex-start"}
+                                >
+                                    <Grid item>
+                                        <h3 className="vertical-timeline-element-title">
+                                            {ele.title}
+                                        </h3>
+                                    </Grid>
+                                    <Grid item>
+                                        <h4 className="vertical-timeline-element-subtitle">
+                                            {ele.subTitle}
+                                        </h4>
+                                    </Grid>
+                                    <Grid item>
+                                        <p>
+                                            {ele.para}
+                                        </p>
+                                    </Grid>
+                                    <Grid item>
+                                        <br/>
+                                    </Grid>
+                                    <Grid item>
+                                        <Grid
+                                            container
+                                            direction={"row"}
+                                            justify={"flex-end"}
+                                            alignItems={"center"}
+                                        >
+                                            <Grid item>
+                                                <BlockButton color={"green"} href={ele.href1}>
+                                                    {ele.text1}
+                                                </BlockButton>
+                                            </Grid>
+                                            <Grid item>
+                                                <BlockButton color={"green"} href={ele.href2}>
+                                                    {ele.text2}
+                                                </BlockButton>
+                                            </Grid>
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                            </VerticalTimelineElement>
+                        )
+                    })
+                }
+                {/*<VerticalTimelineElement
                     className="vertical-timeline-element--work"
                     date="2020"
                     iconStyle={{ background: grayColor[3], color: '#fff' }}
@@ -105,8 +166,14 @@ export default function EducationAndExperienceTimeline(props) {
                             </Grid>
                         </Grid>
                     </Grid>
-                </VerticalTimelineElement>
+                </VerticalTimelineElement>*/}
             </VerticalTimeline>
         </HeaderSubHeaderBody>
     )
+}
+
+Projects.propTypes = {
+    header: PropTypes.string.isRequired,
+    subHeader: PropTypes.string.isRequired,
+    cards: PropTypes.array.isRequired,
 }

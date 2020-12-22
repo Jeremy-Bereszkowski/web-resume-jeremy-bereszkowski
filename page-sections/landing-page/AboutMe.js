@@ -20,13 +20,13 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function AboutMe(props) {
-    const {data} = props
+    const {header, subHeader, data} = props
     const classes = useStyles()
 
     return (
         <HeaderSubHeaderBody
-            header={data.header}
-            subHeader={data.subHeader}
+            header={header}
+            subHeader={subHeader}
         >
             <Grid
                 container
@@ -45,12 +45,12 @@ export default function AboutMe(props) {
                     >
                         <Grid item className={classes.container}>
                             <h3>
-                                {data.about.header}
+                                {data.header}
                             </h3>
                         </Grid>
                         <Grid item className={classes.container}>
                             <h4>
-                                {data.about.subHeader}
+                                {data.subHeader}
                             </h4>
                         </Grid>
                         <Grid item className={classes.container}>
@@ -59,7 +59,7 @@ export default function AboutMe(props) {
                             <br/>
                         </Grid>
                         {
-                            data.about.para.map((ele, key) => (
+                            data.para.map((ele, key) => (
                                 <Grid item key={key} className={classes.container}>
                                     <h5>
                                         <b>
@@ -86,5 +86,7 @@ export default function AboutMe(props) {
 }
 
 AboutMe.propTypes = {
+    header: PropTypes.string.isRequired,
+    subHeader: PropTypes.string.isRequired,
     data: PropTypes.object,
 }

@@ -25,8 +25,6 @@ const useStyles = makeStyles({
 export default function LandingPage(props) {
     const classes = useStyles();
 
-    console.log(useIsTouchDevice())
-
     return (
         <HeaderFooterLayout>
             <ParallaxLayout image={background} header={data.core.header} body={data.core.body}>
@@ -37,16 +35,28 @@ export default function LandingPage(props) {
                     alignItems="stretch"
                 >
                     <Grid item className={classes.padding}>
-                        <AboutMe data={data.aboutMe}/>
+                        <AboutMe
+                            header={data.aboutMe.header}
+                            subHeader={data.aboutMe.subHeader}
+                            data={data.aboutMe.about}
+                        />
                     </Grid>
                     <Grid item className={classes.padding} style={{backgroundColor: grayColor[12]}}>
-                        <Projects />
+                        <Projects
+                            header={data.projects.header}
+                            subHeader={data.projects.subHeader}
+                            cards={data.projects.cards}
+                        />
                     </Grid>
                     <Grid item className={classes.padding}>
                         <SkillsAndTools />
                     </Grid>
                     <Grid item className={classes.padding} style={{backgroundColor: grayColor[7]}}>
-                        <EducationAndExperienceTimeline />
+                        <EducationAndExperienceTimeline
+                            header={data.education.header}
+                            subHeader={data.education.subHeader}
+                            cards={data.education.cards}
+                        />
                     </Grid>
                 </Grid>
             </ParallaxLayout>
