@@ -12,7 +12,7 @@ import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles({
     footer: {
-        paddingTop: "70px",
+        paddingTop: "40px",
         paddingBottom: "40px",
         paddingRight: "25px",
         paddingLeft: "25px",

@@ -9,7 +9,8 @@ import HeaderSubHeaderBody from "components/GridLayouts/HeaderSubHeaderBody";
 
 const useStyles = makeStyles(theme => ({
     container: {
-        maxWidth: "80%",
+        maxWidth: "90%",
+        /*margin: "0 auto 0 auto",*/
     },
     large: {
         width: theme.spacing(30),
@@ -34,32 +35,32 @@ export default function AboutMe(props) {
                 alignItems={"center"}
                 alignContent={"center"}
             >
-                <Grid item xs={12} md={9}>
+                <Grid item>
                     <Grid
                         container
                         direction={"column"}
                         justify={"center"}
                         alignItems={"flex-start"}
-                        className={classes.container}
+                        alignContent={"center"}
                     >
-                        <Grid item>
+                        <Grid item className={classes.container}>
                             <h3>
                                 {data.about.header}
                             </h3>
                         </Grid>
-                        <Grid item>
+                        <Grid item className={classes.container}>
                             <h4>
                                 {data.about.subHeader}
                             </h4>
                         </Grid>
-                        <Grid item>
+                        <Grid item className={classes.container}>
                             <br/>
                             <br/>
                             <br/>
                         </Grid>
                         {
                             data.about.para.map((ele, key) => (
-                                <Grid item key={key}>
+                                <Grid item key={key} className={classes.container}>
                                     <h5>
                                         <b>
                                             {ele}
@@ -74,7 +75,7 @@ export default function AboutMe(props) {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item xs={12} md={3}>
+                <Grid item>
                     <Avatar className={classes.large}>
 
                     </Avatar>

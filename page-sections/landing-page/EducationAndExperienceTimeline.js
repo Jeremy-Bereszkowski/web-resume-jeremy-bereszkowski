@@ -9,7 +9,6 @@ import StarIcon from '@material-ui/icons/Star';
 import HeaderSubHeaderBody from "components/GridLayouts/HeaderSubHeaderBody";
 
 import {grayColor} from "assets/jss/nextjs-material-kit-pro";
-import Colours from "assets/strings/colours";
 
 import 'react-vertical-timeline-component/style.min.css';
 
@@ -29,7 +28,7 @@ export default function EducationAndExperienceTimeline(props) {
                     className="vertical-timeline-element--education"
                     contentStyle={{ background: grayColor[3], color: '#fff' }}
                     date="2018-present"
-                    iconStyle={{ background: grayColor[12], color: '#fff' }}
+                    iconStyle={{ background: grayColor[6], color: '#fff' }}
                     icon={<WorkIcon />}
                 >
                     <h3 className="vertical-timeline-element-title">M. Brodribb Pty Ltd</h3>
@@ -50,7 +49,7 @@ export default function EducationAndExperienceTimeline(props) {
                     <h3 className="vertical-timeline-element-title">Synergo Teknologi</h3>
                     <h4 className="vertical-timeline-element-subtitle">Software Developer</h4>
                     <p>
-                        Software Development intern
+                        Software Development Intern
                     </p>
                     <p>
                         Based in Jakarta, Indonesia.
@@ -69,15 +68,15 @@ export default function EducationAndExperienceTimeline(props) {
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
                     contentStyle={{ background: grayColor[3], color: '#fff' }}
+                    iconStyle={{ background: grayColor[4], color: '#fff' }}
                     date="2014"
-                    iconStyle={{ background: grayColor[10], color: '#fff' }}
                     icon={<SchoolIcon />}
                 >
                     <h3 className="vertical-timeline-element-title">The King David School</h3>
                     <h4 className="vertical-timeline-element-subtitle">Melbourne, Australia</h4>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
-                    iconStyle={{ background: Colours.green, color: '#fff' }}
+                    iconStyle={{ background: grayColor[8], color: '#fff' }}
                     icon={<StarIcon />}
                 />
             </VerticalTimeline>
