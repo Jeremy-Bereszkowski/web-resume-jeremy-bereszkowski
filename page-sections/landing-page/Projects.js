@@ -2,22 +2,24 @@ import React from 'react'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 
 import {makeStyles} from "@material-ui/core/styles"
+import {Grid} from "@material-ui/core";
 import StarIcon from '@material-ui/icons/Star';
 
+import BlockButton from "components/Buttons/BlockButton";
 import HeaderSubHeaderBody from "components/GridLayouts/HeaderSubHeaderBody";
+
+import useIsTouchDevice from "util/device-detect";
 
 import {grayColor} from "assets/jss/nextjs-material-kit-pro";
 
 import 'react-vertical-timeline-component/style.min.css';
-import Button from "@material-ui/core/Button";
-import {Block} from "@material-ui/icons";
-import BlockButton from "../../components/Buttons/BlockButton";
-import {Grid} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({}))
 
 export default function EducationAndExperienceTimeline(props) {
     const classes = useStyles()
+
+    const animate = useIsTouchDevice() ? false : true
 
     return (
         <HeaderSubHeaderBody
@@ -25,13 +27,14 @@ export default function EducationAndExperienceTimeline(props) {
             subHeader={"My previous work"}
             headerColor={"light"}
         >
-            <VerticalTimeline>
+            <VerticalTimeline animate={animate}>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
                     date="2020"
                     iconStyle={{ background: grayColor[3], color: '#fff' }}
                     icon={<StarIcon />}
                 >
+
                     <h3 className="vertical-timeline-element-title">MoveWell Physiotherapy</h3>
                     <h4 className="vertical-timeline-element-subtitle">NextJS</h4>
                     <p>

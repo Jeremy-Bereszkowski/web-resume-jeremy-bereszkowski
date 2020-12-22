@@ -4,7 +4,8 @@ import classNames from "classnames"
 
 import {makeStyles} from "@material-ui/core/styles"
 import {Grid} from "@material-ui/core";
-import {sectionHeaderText, sectionSubHeaderText} from "../../assets/jss/coreStyles";
+
+import {sectionHeaderText, sectionSubHeaderText} from "assets/jss/coreStyles";
 
 const useStyles = makeStyles(theme => ({
     sectionHeaderText,

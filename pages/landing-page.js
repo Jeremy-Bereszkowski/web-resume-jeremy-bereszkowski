@@ -14,6 +14,7 @@ import SkillsAndTools from "page-sections/landing-page/SkillsAndTools";
 import {grayColor} from "assets/jss/nextjs-material-kit-pro";
 import background from "assets/img/bg7.jpg"
 import data from "assets/data/pages/landing-data"
+import useIsTouchDevice from "../util/device-detect";
 
 const useStyles = makeStyles({
     padding: {
@@ -24,12 +25,14 @@ const useStyles = makeStyles({
 export default function LandingPage(props) {
     const classes = useStyles();
 
+    console.log(useIsTouchDevice())
+
     return (
         <HeaderFooterLayout>
             <ParallaxLayout image={background} header={data.core.header} body={data.core.body}>
                 <Grid
                     container
-                    direction={"column"}
+                    direction="column"
                     justify="center"
                     alignItems="stretch"
                 >

@@ -86,10 +86,14 @@ const useStyles = makeStyles(theme => ({
         hexToRgb(grayColor[9]) +
         ", 0.46)"
   },
+  invisible: {
+    color: "transparent",
+  }
 }));
 
 export default function Header(props) {
   const classes = useStyles();
+  const [brandClasses, setBrandClasses] = React.useState(classes.title)
   const color = "transparent"
   const changeColorOnScroll = {
     height: 25,
@@ -116,6 +120,7 @@ export default function Header(props) {
       document.body
           .getElementsByTagName("header")[0]
           .classList.add(classes[changeColorOnScroll.color]);
+      setBrandClasses(classes.title)
     } else {
       document.body
           .getElementsByTagName("header")[0]
@@ -123,6 +128,7 @@ export default function Header(props) {
       document.body
           .getElementsByTagName("header")[0]
           .classList.remove(classes[changeColorOnScroll.color]);
+      setBrandClasses(classNames(classes.title, classes.invisible))
     }
   };
 
@@ -135,7 +141,7 @@ export default function Header(props) {
   return (
       <AppBar className={appBarClasses}>
         <div className={classes.container}>
-          <h2 className={classes.title}>
+          <h2 className={brandClasses}>
             {HeaderData.brand}
           </h2>
         </div>

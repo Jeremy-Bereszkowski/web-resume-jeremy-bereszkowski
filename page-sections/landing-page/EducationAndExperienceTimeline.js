@@ -23,7 +23,7 @@ export default function EducationAndExperienceTimeline(props) {
             subHeader={"My previous work history and education"}
             headerColor={"light"}
         >
-            <VerticalTimeline>
+            <VerticalTimeline animate={false}>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--education"
                     contentStyle={{ background: grayColor[3], color: '#fff' }}
