@@ -25,8 +25,8 @@ const LandingData = {
         }
     },
     projects: {
-        header: "Work Experience and Education",
-        subHeader: "My previous work history and education",
+        header: "Product and Projects",
+        subHeader: "Work Portfolio",
         cards: [
             {
                 title: "MoveWell Physiotherapy",
