@@ -143,24 +143,24 @@ export default function Header(props) {
   return (
       <AppBar className={appBarClasses}>
         <div className={classes.container}>
-          <Grid
-              container
-              direction={"row"}
-              justify={"space-between"}
-              alignItems={"center"}
-          >
-            <Grid item>
-              {
-                transparent ? null :
+          {
+            transparent ? null :
+                <Grid
+                    container
+                    direction={"row"}
+                    justify={"space-between"}
+                    alignItems={"center"}
+                >
+                  <Grid item>
                     <h2 className={brandClasses}>
                       {HeaderData.brand}
                     </h2>
-              }
-            </Grid>
-            <Grid item>
-              <SocialButtonGroup transparent={transparent}/>
-            </Grid>
-          </Grid>
+                  </Grid>
+                  <Grid item>
+                    <SocialButtonGroup transparent={transparent}/>
+                  </Grid>
+                </Grid>
+          }
         </div>
       </AppBar>
   );
