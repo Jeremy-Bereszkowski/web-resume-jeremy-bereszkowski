@@ -6,8 +6,11 @@
 import React from "react";
 import classNames from "classnames";
 
+import {Grid} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
+
+import SocialButtonGroup from "../Buttons/SocialButtonGroup";
 
 import {
   blackColor,
@@ -64,10 +67,6 @@ const useStyles = makeStyles(theme => ({
       textTransform: "none",
       whiteSpace: "nowrap",
       color: "inherit",
-      "&:hover,&:focus": {
-        color: "inherit",
-        background: "transparent"
-      }
     }
   },
   transparent: {
@@ -94,6 +93,7 @@ const useStyles = makeStyles(theme => ({
 export default function Header(props) {
   const classes = useStyles();
   const [brandClasses, setBrandClasses] = React.useState(classNames(classes.title, classes.invisible))
+  const [transparent, setTransparent] = React.useState(true)
   const color = "transparent"
   const changeColorOnScroll = {
     height: 25,
@@ -121,6 +121,7 @@ export default function Header(props) {
           .getElementsByTagName("header")[0]
           .classList.add(classes[changeColorOnScroll.color]);
       setBrandClasses(classes.title)
+      setTransparent(false)
     } else {
       document.body
           .getElementsByTagName("header")[0]
@@ -129,6 +130,7 @@ export default function Header(props) {
           .getElementsByTagName("header")[0]
           .classList.remove(classes[changeColorOnScroll.color]);
       setBrandClasses(classNames(classes.title, classes.invisible))
+      setTransparent(true)
     }
   };
 
@@ -141,9 +143,24 @@ export default function Header(props) {
   return (
       <AppBar className={appBarClasses}>
         <div className={classes.container}>
-          <h2 className={brandClasses}>
-            {HeaderData.brand}
-          </h2>
+          <Grid
+              container
+              direction={"row"}
+              justify={"space-between"}
+              alignItems={"center"}
+          >
+            <Grid item>
+              {
+                transparent ? null :
+                    <h2 className={brandClasses}>
+                      {HeaderData.brand}
+                    </h2>
+              }
+            </Grid>
+            <Grid item>
+              <SocialButtonGroup transparent={transparent}/>
+            </Grid>
+          </Grid>
         </div>
       </AppBar>
   );

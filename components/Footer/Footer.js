@@ -4,7 +4,7 @@ import classNames from "classnames";
 import {makeStyles} from "@material-ui/core/styles";
 import {Grid} from "@material-ui/core";
 
-import FooterButton from "components/Buttons/FooterButton";
+import SocialButtonGroup from "components/Buttons/SocialButtonGroup";
 
 import {grayColor, hexToRgb, whiteColor} from "assets/jss/nextjs-material-kit-pro";
 import FooterData from "assets/data/components/footer";
@@ -94,30 +94,7 @@ export default function Footer() {
                     </Grid>
                 </Grid>
                 <Grid item>
-                    <Grid
-                        container
-                        direction={"row"}
-                        justify={"center"}
-                        alignContent={"center"}
-                        alignItems={"center"}
-                    >
-                        <Grid item>
-                            <FooterButton
-                                href="https://www.facebook.com/movewellmelbourne"
-                                target="_blank"
-                            >
-                                <i className="fab fa-facebook" />
-                            </FooterButton>
-                        </Grid>
-                        <Grid item>
-                            <FooterButton
-                                href="https://www.instagram.com/movewellmelbourne/"
-                                target="_blank"
-                            >
-                                <i className="fab fa-instagram" />
-                            </FooterButton>
-                        </Grid>
-                    </Grid>
+                    <SocialButtonGroup />
                 </Grid>
                 <Grid item>
                     <Grid
