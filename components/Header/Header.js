@@ -93,7 +93,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Header(props) {
   const classes = useStyles();
-  const [brandClasses, setBrandClasses] = React.useState(classes.title)
+  const [brandClasses, setBrandClasses] = React.useState(classNames(classes.title, classes.invisible))
   const color = "transparent"
   const changeColorOnScroll = {
     height: 25,
