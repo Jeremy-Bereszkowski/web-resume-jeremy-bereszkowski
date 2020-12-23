@@ -37,7 +37,7 @@ export default function Projects(props) {
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--work"
                                 date="2020"
-                                iconStyle={{ background: Colours.green, color: '#fff' }}
+                                iconStyle={{ background: Colours.primary, color: '#fff' }}
                                 icon={<StarIcon />}
                                 key={key}
                             >

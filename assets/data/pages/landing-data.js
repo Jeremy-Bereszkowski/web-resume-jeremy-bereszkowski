@@ -2,10 +2,18 @@ import React from "react";
 
 import {fullName} from "../global";
 
+/*Logos*/
 const JavaScriptLogo = "/logos/JavaScript.png"
 const CloudLogo = "/logos/Cloud.jpg"
 const ToolsLogo = "/logos/Tools.jpg"
 const JavaLogo = "/logos/Java.png"
+
+/*Hobbies*/
+const Snowboard = "/hobbies/Snowboard.png"
+const Yoga = "/hobbies/Yoga.png"
+const Bicycle = "/hobbies/Bicycle.png"
+
+
 
 const LandingData = {
     core: {
@@ -132,9 +140,23 @@ const LandingData = {
     hobbies: {
       header: "Hobbies",
       subHeader: "What I do, when I'm not at a computer",
-      data: {
-
-      }
+      data: [
+          {
+              image: Snowboard,
+              text: "Snowboarding",
+              flipDirection: "vertical",
+          },
+          {
+              image: Yoga,
+              text: "Yoga",
+              flipDirection: "horizontal",
+          },
+          {
+              image: Bicycle,
+              text: "Cycling",
+              flipDirection: "vertical",
+          },
+      ]
     },
 }
 

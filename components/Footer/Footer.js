@@ -23,7 +23,7 @@ const useStyles = makeStyles({
         },
     },
     footerBrand: {
-        color: Colours.green,
+        color: Colours.primary,
         margin: "0",
     },
     dark: {

@@ -36,7 +36,7 @@ const parallaxSubHeaderText = {
 }
 
 const sectionText = {
-    color: Colours.green,
+    color: Colours.primary,
     margin: "0",
     textTransform: "uppercase",
     textAlign: "center",
@@ -71,7 +71,7 @@ const darkColor = {
 }
 
 const greenHrThick = {
-    borderTop: "7px solid " + Colours.green,
+    borderTop: "7px solid " + Colours.primary,
     marginLeft: "10%",
     marginRight: "10%",
 }

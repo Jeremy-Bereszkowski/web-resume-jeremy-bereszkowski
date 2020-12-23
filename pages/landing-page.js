@@ -16,6 +16,7 @@ import Hobbies from "page-sections/landing-page/Hobbies";
 import {grayColor} from "assets/jss/nextjs-material-kit-pro";
 import background from "assets/img/bg7.jpg"
 import data from "assets/data/pages/landing-data"
+import Colours from "../assets/strings/colours";
 
 const useStyles = makeStyles({
     padding: {
@@ -25,7 +26,7 @@ const useStyles = makeStyles({
         backgroundColor: grayColor[12],
     },
     blueGreyBackground: {
-        backgroundColor: grayColor[7],
+        backgroundColor: Colours.primary,
     },
 });
 
@@ -73,7 +74,7 @@ export default function LandingPage(props) {
                         <Hobbies
                             header={data.hobbies.header}
                             subHeader={data.hobbies.subHeader}
-                            data={data.hobbies.about}
+                            data={data.hobbies.data}
                         />
                     </Grid>
                 </Grid>

@@ -249,7 +249,7 @@ const useStyles = makeStyles(theme => ({
     cursor: "pointer",
     "&:hover": {
       color: whiteColor,
-      backgroundColor: Colours.green,
+      backgroundColor: Colours.primary,
       boxShadow:
           "0 14px 26px -12px rgba(" +
           hexToRgb(grayColor[0]) +
@@ -280,7 +280,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   underline: {
-    borderBottom: "5px solid " + Colours.green,
+    borderBottom: "5px solid " + Colours.primary,
   }
 }));
 

@@ -22,7 +22,7 @@ const useStyles = makeStyles({
         width: "100%",
         maxWidth: "1200px",
         zIndex: "2",
-        border: "solid 2px " + Colours.green
+        border: "solid 2px " + Colours.primary
     },
     title: {
         ...parallaxHeaderText,

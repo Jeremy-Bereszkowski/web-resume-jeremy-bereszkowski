@@ -12,13 +12,15 @@ import HeaderSubHeaderBody from "components/GridLayouts/HeaderSubHeaderBody";
 const useStyles = makeStyles(theme => ({
     container: {
         maxWidth: "90%",
-        /*margin: "0 auto 0 auto",*/
     },
     large: {
         width: theme.spacing(30),
         height: theme.spacing(30),
         margin: "0 auto",
     },
+    height: {
+        minHeight: "55vh"
+    }
 }))
 
 export default function AboutMe(props) {
@@ -36,6 +38,7 @@ export default function AboutMe(props) {
                 justify={"center"}
                 alignItems={"center"}
                 alignContent={"center"}
+                className={classes.height}
             >
                 <Grid item>
                     <Flip left>

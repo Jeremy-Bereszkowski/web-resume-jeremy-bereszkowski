@@ -42,11 +42,11 @@ const useStyles = makeStyles(theme => ({
     },
     dark: {
         "&,&:focus,&:hover": {
-            color: Colours.green,
+            color: Colours.primary,
             backgroundColor: grayColor[3]
         },
         "&:hover,&:focus": {
-            color: Colours.green,
+            color: Colours.primary,
             backgroundColor: whiteColor,
             boxShadow:
                 "0 14px 26px -12px rgba(" +
@@ -61,10 +61,10 @@ const useStyles = makeStyles(theme => ({
     green: {
         "&,&:focus,&:hover": {
             color: whiteColor,
-            backgroundColor: Colours.green,
+            backgroundColor: Colours.primary,
         },
         "&:hover,&:focus": {
-            color: Colours.green,
+            color: Colours.primary,
             backgroundColor: Colours.white,
             boxShadow:
                 "0 14px 26px -12px rgba(" +

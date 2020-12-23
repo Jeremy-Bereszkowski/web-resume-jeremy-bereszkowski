@@ -22,6 +22,9 @@ const useStyles = makeStyles(theme => ({
     },
     centerText: {
         textAlign: "center",
+    },
+    height: {
+        minHeight: "55vh"
     }
 }))
 
@@ -37,8 +40,9 @@ export default function SkillsAndTools(props) {
             <Grid
                 container
                 direction={"row"}
-                alignItems={"flex-start"}
+                alignItems={"center"}
                 justify={"space-evenly"}
+                className={classes.height}
             >
                 {
                     cards.map((ele, key) => (
