@@ -1,6 +1,7 @@
 import React from "react";
 
 import {fullName} from "../global";
+import Colours from "../../strings/colours";
 
 /*Logos*/
 const JavaScriptLogo = "/logos/JavaScript.png"
@@ -12,7 +13,7 @@ const JavaLogo = "/logos/Java.png"
 const Snowboard = "/hobbies/Snowboard.png"
 const Yoga = "/hobbies/Yoga.png"
 const Bicycle = "/hobbies/Bicycle.png"
-
+const Camping = "/hobbies/camping.png"
 
 
 const LandingData = {
@@ -46,6 +47,7 @@ const LandingData = {
                 href1: "https://move-well-physio.vercel.app/",
                 text2: "Source Code",
                 href2: "https://github.com/s3539822/MoveWellPhysio",
+                color: Colours.primary,
             },
             {
                 title: "PICD Software Managment Tool",
@@ -56,6 +58,7 @@ const LandingData = {
                 href1: "",
                 text2: "Source Code",
                 href2: "",
+                color: Colours.primary,
             },
         ]
     },
@@ -156,6 +159,11 @@ const LandingData = {
               text: "Cycling",
               flipDirection: "vertical",
           },
+          {
+              image: Camping,
+              text: "Camping",
+              flipDirection: "horizontal",
+          }
       ]
     },
 }

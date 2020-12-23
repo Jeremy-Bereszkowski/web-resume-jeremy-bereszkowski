@@ -9,7 +9,10 @@ import Avatar from "@material-ui/core/Avatar";
 
 import HeaderSubHeaderBody from "components/GridLayouts/HeaderSubHeaderBody";
 
+import {sectionHeight} from "assets/jss/coreStyles";
+
 const useStyles = makeStyles(theme => ({
+    sectionHeight,
     container: {
         maxWidth: "90%",
     },
@@ -17,9 +20,6 @@ const useStyles = makeStyles(theme => ({
         width: theme.spacing(30),
         height: theme.spacing(30),
         margin: "0 auto",
-    },
-    height: {
-        minHeight: "55vh"
     }
 }))
 
@@ -38,7 +38,7 @@ export default function AboutMe(props) {
                 justify={"center"}
                 alignItems={"center"}
                 alignContent={"center"}
-                className={classes.height}
+                className={classes.sectionHeight}
             >
                 <Grid item>
                     <Flip left>

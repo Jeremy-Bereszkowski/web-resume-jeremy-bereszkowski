@@ -1,4 +1,5 @@
 import React from 'react'
+import Jump from "react-reveal";
 import PropTypes from "prop-types";
 
 import {makeStyles} from "@material-ui/core/styles"
@@ -8,9 +9,11 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import Card from "@material-ui/core/Card";
 
 import HeaderSubHeaderBody from "components/GridLayouts/HeaderSubHeaderBody";
-import Jump from "react-reveal";
+
+import {sectionHeight} from "assets/jss/coreStyles";
 
 const useStyles = makeStyles(theme => ({
+    sectionHeight,
     card: {
         maxWidth: "300px",
         margin: "1vh auto"
@@ -22,9 +25,6 @@ const useStyles = makeStyles(theme => ({
     },
     centerText: {
         textAlign: "center",
-    },
-    height: {
-        minHeight: "55vh"
     }
 }))
 
@@ -42,7 +42,7 @@ export default function SkillsAndTools(props) {
                 direction={"row"}
                 alignItems={"center"}
                 justify={"space-evenly"}
-                className={classes.height}
+                className={classes.sectionHeight}
             >
                 {
                     cards.map((ele, key) => (

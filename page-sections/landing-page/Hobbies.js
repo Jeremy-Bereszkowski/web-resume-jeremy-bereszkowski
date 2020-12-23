@@ -1,17 +1,16 @@
 import React from 'react'
-import Flip from "react-reveal";
-import Roll from "react-reveal";
 import PropTypes from "prop-types"
 
 import {makeStyles} from "@material-ui/core/styles"
 import {Grid} from "@material-ui/core";
-import Avatar from "@material-ui/core/Avatar";
 
 import HeaderSubHeaderBody from "components/GridLayouts/HeaderSubHeaderBody";
-import ReactCardFlip from "react-card-flip";
-import OnHoverFlipCard from "../../components/Card/OnHoverFlipCard";
+import OnHoverFlipCard from "components/Card/OnHoverFlipCard";
+
+import {sectionHeight} from "assets/jss/coreStyles";
 
 const useStyles = makeStyles(theme => ({
+    sectionHeight,
     container: {
         maxWidth: "90%",
     },
@@ -20,9 +19,6 @@ const useStyles = makeStyles(theme => ({
         height: theme.spacing(30),
         margin: "0 auto",
     },
-    height: {
-        minHeight: "55vh"
-    }
 }))
 
 export default function Hobbies(props) {
@@ -40,11 +36,11 @@ export default function Hobbies(props) {
                 justify={"space-evenly"}
                 alignItems={"center"}
                 alignContent={"center"}
-                className={classes.height}
+                className={classes.sectionHeight}
             >
                 {
                     data.map((ele, key) => (
-                        <Grid item xs={12} md={4} key={key}>
+                        <Grid item xs={12} md={3} key={key}>
                             <Grid
                                 container
                                 direction={"row"}

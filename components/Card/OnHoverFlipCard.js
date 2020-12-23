@@ -3,22 +3,22 @@ import PropTypes from "prop-types"
 import ReactCardFlip from "react-card-flip";
 import useHover from "@react-hook/hover";
 
+import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles"
 
 import Colours from "assets/strings/colours";
-import {Grid} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     card: {
-        width: "100%",
-        maxWidth: "260px",
-        minWidth: "100%",
-        height: "100%",
-        minHeight: "100%",
-        maxHeight: "260px",
+        width: "260px",
+        height: "260px",
         borderRadius: "4px",
-        backgroundColor: Colours.secondary,
+        backgroundColor: Colours.primary,
         boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)"
+    },
+    container: {
+        height: "100%",
+        width: "100%"
     }
 }))
 
@@ -39,13 +39,16 @@ export default function OnHoverFlipCard(props) {
                 <div className={classes.card}>
                     <Grid
                         container
-                        direction={"row"}
+                        direction={"column"}
                         justify={"center"}
                         alignItems={"center"}
+                        className={classes.container}
                     >
                         <Grid item>
                             <h2>
-                                {backText}
+                                <b>
+                                    {backText}
+                                </b>
                             </h2>
                         </Grid>
                     </Grid>

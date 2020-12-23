@@ -12,8 +12,6 @@ import HeaderSubHeaderBody from "components/GridLayouts/HeaderSubHeaderBody";
 
 import useIsTouchDevice from "util/device-detect";
 
-import Colours from "assets/strings/colours";
-
 import 'react-vertical-timeline-component/style.min.css';
 
 const useStyles = makeStyles(theme => ({}))
@@ -37,7 +35,7 @@ export default function Projects(props) {
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--work"
                                 date="2020"
-                                iconStyle={{ background: Colours.primary, color: '#fff' }}
+                                iconStyle={{ background: ele.color, color: '#fff' }}
                                 icon={<StarIcon />}
                                 key={key}
                             >

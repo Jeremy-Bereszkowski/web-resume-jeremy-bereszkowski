@@ -54,6 +54,10 @@ const sectionSubHeaderText = {
     fontWeight: "300",
 }
 
+const sectionHeight = {
+    minHeight: "55vh"
+}
+
 const darkColor = {
     "&:before": {
         background: "rgba(" + hexToRgb(blackColor) + ", 0.5)"
@@ -87,6 +91,8 @@ export {
 
     sectionHeaderText,
     sectionSubHeaderText,
+
+    sectionHeight,
 
     darkColor,
 
