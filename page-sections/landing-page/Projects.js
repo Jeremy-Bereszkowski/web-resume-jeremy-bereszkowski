@@ -12,7 +12,7 @@ import HeaderSubHeaderBody from "components/GridLayouts/HeaderSubHeaderBody";
 
 import useIsTouchDevice from "util/device-detect";
 
-import {grayColor} from "assets/jss/nextjs-material-kit-pro";
+import Colours from "assets/strings/colours";
 
 import 'react-vertical-timeline-component/style.min.css';
 
@@ -37,7 +37,7 @@ export default function Projects(props) {
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--work"
                                 date="2020"
-                                iconStyle={{ background: grayColor[3], color: '#fff' }}
+                                iconStyle={{ background: Colours.green, color: '#fff' }}
                                 icon={<StarIcon />}
                                 key={key}
                             >

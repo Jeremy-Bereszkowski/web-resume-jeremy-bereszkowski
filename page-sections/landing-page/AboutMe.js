@@ -1,4 +1,6 @@
 import React from 'react'
+import Flip from "react-reveal";
+import Roll from "react-reveal";
 import PropTypes from "prop-types"
 
 import {makeStyles} from "@material-ui/core/styles"
@@ -36,49 +38,51 @@ export default function AboutMe(props) {
                 alignContent={"center"}
             >
                 <Grid item>
-                    <Grid
-                        container
-                        direction={"column"}
-                        justify={"center"}
-                        alignItems={"flex-start"}
-                        alignContent={"center"}
-                    >
-                        <Grid item className={classes.container}>
-                            <h3>
-                                {data.header}
-                            </h3>
+                    <Flip left>
+                        <Grid
+                            container
+                            direction={"column"}
+                            justify={"center"}
+                            alignItems={"flex-start"}
+                            alignContent={"center"}
+                        >
+                            <Grid item className={classes.container}>
+                                <h3>
+                                    {data.header}
+                                </h3>
+                            </Grid>
+                            <Grid item className={classes.container}>
+                                <h4>
+                                    {data.subHeader}
+                                </h4>
+                            </Grid>
+                            <Grid item className={classes.container}>
+                                <br/>
+                                <br/>
+                                <br/>
+                            </Grid>
+                            {
+                                data.para.map((ele, key) => (
+                                    <Grid item key={key} className={classes.container}>
+                                        <h5>
+                                            <b>
+                                                {ele}
+                                            </b>
+                                        </h5>
+                                    </Grid>
+                                ))
+                            }
+                            <Grid item>
+                                <br/>
+                                <br/>
+                            </Grid>
                         </Grid>
-                        <Grid item className={classes.container}>
-                            <h4>
-                                {data.subHeader}
-                            </h4>
-                        </Grid>
-                        <Grid item className={classes.container}>
-                            <br/>
-                            <br/>
-                            <br/>
-                        </Grid>
-                        {
-                            data.para.map((ele, key) => (
-                                <Grid item key={key} className={classes.container}>
-                                    <h5>
-                                        <b>
-                                            {ele}
-                                        </b>
-                                    </h5>
-                                </Grid>
-                            ))
-                        }
-                        <Grid item>
-                            <br/>
-                            <br/>
-                        </Grid>
-                    </Grid>
+                    </Flip>
                 </Grid>
                 <Grid item>
-                    <Avatar className={classes.large}>
-
-                    </Avatar>
+                    <Roll right>
+                        <Avatar className={classes.large}/>
+                    </Roll>
                 </Grid>
             </Grid>
         </HeaderSubHeaderBody>

@@ -2,9 +2,10 @@ import React from "react";
 
 import {fullName} from "../global";
 
-import WorkIcon from "@material-ui/icons/Work";
-import SchoolIcon from '@material-ui/icons/School';
-import StarIcon from '@material-ui/icons/Star';
+const JavaScriptLogo = "/logos/JavaScript.png"
+const CloudLogo = "/logos/Cloud.jpg"
+const ToolsLogo = "/logos/Tools.jpg"
+const JavaLogo = "/logos/Java.png"
 
 const LandingData = {
     core: {
@@ -50,6 +51,47 @@ const LandingData = {
             },
         ]
     },
+    skills: {
+        header: "Skills and Tools",
+        subHeader: "My preferred languages and dev tools",
+        cards: [
+            {
+                title: "Javascript",
+                logo: JavaScriptLogo,
+                list: [
+                    "ReactJS",
+                    "NextJS",
+                    "ExpressJS",
+                ],
+            },
+            {
+                title: "Java",
+                logo: JavaLogo,
+                list: [
+                    "Java 9",
+                    "Android",
+                ],
+            },
+            {
+                title: "Cloud",
+                logo: CloudLogo,
+                list: [
+                    "AWS",
+                    "Google Cloud",
+                    "Vercel",
+                ],
+            },
+            {
+                title: "Tools",
+                logo: ToolsLogo,
+                list: [
+                    "Docker",
+                    "Github",
+                    "Travis CI",
+                ],
+            },
+        ],
+    },
     education: {
         header: "Work Experience and Education",
         subHeader: "My previous work history and education",
@@ -86,7 +128,14 @@ const LandingData = {
                 color: 4,
             }
         ]
-    }
+    },
+    hobbies: {
+      header: "Hobbies",
+      subHeader: "What I do, when I'm not at a computer",
+      data: {
+
+      }
+    },
 }
 
 export default LandingData

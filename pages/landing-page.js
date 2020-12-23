@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames"
 
 import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
@@ -10,16 +11,22 @@ import AboutMe from "page-sections/landing-page/AboutMe";
 import EducationAndExperienceTimeline from "page-sections/landing-page/EducationAndExperienceTimeline";
 import Projects from "page-sections/landing-page/Projects";
 import SkillsAndTools from "page-sections/landing-page/SkillsAndTools";
+import Hobbies from "page-sections/landing-page/Hobbies";
 
 import {grayColor} from "assets/jss/nextjs-material-kit-pro";
 import background from "assets/img/bg7.jpg"
 import data from "assets/data/pages/landing-data"
-import useIsTouchDevice from "../util/device-detect";
 
 const useStyles = makeStyles({
     padding: {
         padding: "4vh 0",
-    }
+    },
+    lightGreyBackground: {
+        backgroundColor: grayColor[12],
+    },
+    blueGreyBackground: {
+        backgroundColor: grayColor[7],
+    },
 });
 
 export default function LandingPage(props) {
@@ -41,7 +48,7 @@ export default function LandingPage(props) {
                             data={data.aboutMe.about}
                         />
                     </Grid>
-                    <Grid item className={classes.padding} style={{backgroundColor: grayColor[12]}}>
+                    <Grid item className={classNames(classes.padding, classes.lightGreyBackground)}>
                         <Projects
                             header={data.projects.header}
                             subHeader={data.projects.subHeader}
@@ -49,13 +56,24 @@ export default function LandingPage(props) {
                         />
                     </Grid>
                     <Grid item className={classes.padding}>
-                        <SkillsAndTools />
+                        <SkillsAndTools
+                            header={data.skills.header}
+                            subHeader={data.skills.subHeader}
+                            cards={data.skills.cards}
+                        />
                     </Grid>
-                    <Grid item className={classes.padding} style={{backgroundColor: grayColor[7]}}>
+                    <Grid item className={classNames(classes.padding, classes.blueGreyBackground)}>
                         <EducationAndExperienceTimeline
                             header={data.education.header}
                             subHeader={data.education.subHeader}
                             cards={data.education.cards}
+                        />
+                    </Grid>
+                    <Grid item className={classes.padding}>
+                        <Hobbies
+                            header={data.hobbies.header}
+                            subHeader={data.hobbies.subHeader}
+                            data={data.hobbies.about}
                         />
                     </Grid>
                 </Grid>
