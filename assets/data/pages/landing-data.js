@@ -13,7 +13,7 @@ const JavaLogo = "/logos/Java.png"
 const Snowboard = "/hobbies/Snowboard.png"
 const Yoga = "/hobbies/Yoga.png"
 const Bicycle = "/hobbies/Bicycle.png"
-const Camping = "/hobbies/camping.png"
+const Camping = "/hobbies/Camping.png"
 
 
 const LandingData = {

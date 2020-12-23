@@ -75,7 +75,7 @@ const darkColor = {
 }
 
 const greenHrThick = {
-    borderTop: "7px solid " + Colours.primary,
+    borderTop: "7px solid " + Colours.secondary,
     marginLeft: "10%",
     marginRight: "10%",
 }
