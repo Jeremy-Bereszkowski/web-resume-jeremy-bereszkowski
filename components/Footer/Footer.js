@@ -74,7 +74,7 @@ export default function Footer() {
                 alignContent={"center"}
                 alignItems={"center"}
             >
-                <Grid item>
+                <Grid item xs={12} sm={12} md={3}>
                     <Grid
                         container
                         direction={"column"}
@@ -93,7 +93,7 @@ export default function Footer() {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item>
+                <Grid item xs={12} sm={12} md={3}>
                     <Grid
                         container
                         direction={"row"}
@@ -119,7 +119,7 @@ export default function Footer() {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item>
+                <Grid item xs={12} sm={12} md={3}>
                     <Grid
                         container
                         direction={"column"}

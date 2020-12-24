@@ -40,7 +40,7 @@ export default function AboutMe(props) {
                 alignContent={"center"}
                 className={classes.sectionHeight}
             >
-                <Grid item>
+                <Grid item md={8}>
                     <Flip left>
                         <Grid
                             container

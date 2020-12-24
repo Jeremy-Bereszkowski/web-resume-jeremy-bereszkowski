@@ -15,7 +15,6 @@ const Yoga = "/hobbies/Yoga.png"
 const Bicycle = "/hobbies/Bicycle.png"
 const Camping = "/hobbies/Camping.png"
 
-
 const LandingData = {
     core: {
         header: fullName,

@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
         width: "260px",
         height: "260px",
         borderRadius: "4px",
-        backgroundColor: Colours.primary,
+        backgroundColor: Colours.secondary,
         boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)"
     },
     container: {
@@ -27,7 +27,7 @@ export default function OnHoverFlipCard(props) {
     const classes = useStyles()
 
     const target = React.useRef(null)
-    const isHovering = useHover(target, {enterDelay: 200, leaveDelay: 200})
+    const isHovering = useHover(target, {enterDelay: 50, leaveDelay: 100})
 
     return (
         <div style={{margin: "10px"}} ref={target}>
@@ -45,7 +45,7 @@ export default function OnHoverFlipCard(props) {
                         className={classes.container}
                     >
                         <Grid item>
-                            <h2>
+                            <h2 style={{color: "black"}}>
                                 <b>
                                     {backText}
                                 </b>
