@@ -93,7 +93,7 @@ export default function Footer() {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item>
+                <Grid item xs={12} sm={12} md={3}>
                     <SocialButtonGroup />
                 </Grid>
                 <Grid item xs={12} sm={12} md={3}>
