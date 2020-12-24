@@ -14,9 +14,11 @@ import SkillsAndTools from "page-sections/landing-page/SkillsAndTools";
 import Hobbies from "page-sections/landing-page/Hobbies";
 
 import {grayColor} from "assets/jss/nextjs-material-kit-pro";
-import background from "assets/img/bg7.jpg"
+/*import background from "assets/img/bg7.jpg"*/
 import data from "assets/data/pages/landing-data"
 import Colours from "assets/strings/colours";
+
+const background = "/background.jpg"
 
 const useStyles = makeStyles({
     padding: {

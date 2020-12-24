@@ -74,7 +74,7 @@ export default function Footer() {
                 alignContent={"center"}
                 alignItems={"center"}
             >
-                <Grid item xs={12} sm={12} md={3}>
+                <Grid item>
                     <Grid
                         container
                         direction={"column"}
@@ -93,10 +93,10 @@ export default function Footer() {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item xs={12} sm={12} md={3}>
+                <Grid item>
                     <SocialButtonGroup />
                 </Grid>
-                <Grid item xs={12} sm={12} md={3}>
+                <Grid item>
                     <Grid
                         container
                         direction={"column"}
