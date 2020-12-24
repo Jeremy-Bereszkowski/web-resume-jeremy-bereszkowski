@@ -17,12 +17,16 @@ import {grayColor} from "assets/jss/nextjs-material-kit-pro";
 /*import background from "assets/img/bg7.jpg"*/
 import data from "assets/data/pages/landing-data"
 import Colours from "assets/strings/colours";
+import Parallax from "../components/Parallax/Parallax";
 
 const background = "/background.jpg"
 
 const useStyles = makeStyles({
     padding: {
         padding: "4vh 0",
+    },
+    baseBackground: {
+        backgroundColor: grayColor[14],
     },
     lightGreyBackground: {
         backgroundColor: grayColor[12],
@@ -43,8 +47,9 @@ export default function LandingPage(props) {
                     direction="column"
                     justify="center"
                     alignItems="stretch"
+
                 >
-                    <Grid item className={classes.padding}>
+                    <Grid item className={classNames(classes.padding, classes.baseBackground)} style={{display: "absolute", zIndex: "7"}}>
                         <AboutMe
                             header={data.aboutMe.header}
                             subHeader={data.aboutMe.subHeader}
@@ -58,12 +63,16 @@ export default function LandingPage(props) {
                             cards={data.projects.cards}
                         />
                     </Grid>
-                    <Grid item className={classes.padding}>
-                        <SkillsAndTools
-                            header={data.skills.header}
-                            subHeader={data.skills.subHeader}
-                            cards={data.skills.cards}
-                        />
+                    <Grid item className={classNames(classes.padding, classes.baseBackground)}>
+                        {/*<Parallax image={background} filter="dark">
+                            <div className={classes.container}>*/}
+                                <SkillsAndTools
+                                    header={data.skills.header}
+                                    subHeader={data.skills.subHeader}
+                                    cards={data.skills.cards}
+                                />
+                            {/*</div>
+                        </Parallax>*/}
                     </Grid>
                     <Grid item className={classNames(classes.padding, classes.blueGreyBackground)}>
                         <EducationAndExperienceTimeline
