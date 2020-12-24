@@ -74,44 +74,62 @@ export default function Footer() {
                 alignContent={"center"}
                 alignItems={"center"}
             >
-                <Grid item>
+                <Grid item xs={12} md={3}>
                     <Grid
                         container
                         direction={"column"}
                         justify={"center"}
-                        alignItems={"flex-start"}
+                        alignItems={"center"}
                     >
                         <Grid item>
-                            <h3 className={classes.footerBrand}>
-                                {FooterData.left.header}
-                            </h3>
-                        </Grid>
-                        <Grid item>
-                            <h5 className={classes.footerBrand}>
-                                {FooterData.left.address}
-                            </h5>
+                            <Grid
+                                container
+                                direction={"column"}
+                                justify={"flex-start"}
+                                alignItems={"flex-start"}
+                            >
+                                <Grid item>
+                                    <h3 className={classes.footerBrand}>
+                                        {FooterData.left.header}
+                                    </h3>
+                                </Grid>
+                                <Grid item>
+                                    <h5 className={classes.footerBrand}>
+                                        {FooterData.left.address}
+                                    </h5>
+                                </Grid>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item>
+                <Grid item xs={12} md={3}>
                     <SocialButtonGroup />
                 </Grid>
-                <Grid item>
+                <Grid item xs={12} md={3}>
                     <Grid
                         container
                         direction={"column"}
                         justify={"center"}
-                        alignItems={"flex-end"}
+                        alignItems={"center"}
                     >
                         <Grid item>
-                            <h5 className={classes.footerBrand}>
-                                {FooterData.right.email}
-                            </h5>
-                        </Grid>
-                        <Grid item>
-                            <h5 className={classes.footerBrand}>
-                                {FooterData.right.phone}
-                            </h5>
+                            <Grid
+                                container
+                                direction={"column"}
+                                justify={"flex-end"}
+                                alignItems={"flex-end"}
+                            >
+                                <Grid item>
+                                    <h5 className={classes.footerBrand}>
+                                        {FooterData.right.email}
+                                    </h5>
+                                </Grid>
+                                <Grid item>
+                                    <h5 className={classes.footerBrand}>
+                                        {FooterData.right.phone}
+                                    </h5>
+                                </Grid>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Grid>
