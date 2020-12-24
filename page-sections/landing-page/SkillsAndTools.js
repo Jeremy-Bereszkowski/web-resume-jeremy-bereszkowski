@@ -46,7 +46,7 @@ export default function SkillsAndTools(props) {
             >
                 {
                     cards.map((ele, key) => (
-                        <Grid xs={12} md={3} item key={key}>
+                        <Grid xs={12} sm={6} md={6} lg={3} item key={key}>
                             <Jump>
                                 <Card className={classes.card}>
                                     <CardActionArea>

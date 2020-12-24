@@ -40,7 +40,7 @@ export default function Hobbies(props) {
             >
                 {
                     data.map((ele, key) => (
-                        <Grid item xs={12} md={3} key={key}>
+                        <Grid xs={12} sm={6} md={6} lg={3} item key={key}>
                             <Grid
                                 container
                                 direction={"row"}
