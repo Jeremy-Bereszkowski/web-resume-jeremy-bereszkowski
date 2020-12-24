@@ -27,7 +27,7 @@ const useStyles = makeStyles({
         backgroundColor: grayColor[14],
     },
     lightGreyBackground: {
-        backgroundColor: grayColor[12],
+        backgroundColor: Colours.secondary,
     },
     blueGreyBackground: {
         backgroundColor: Colours.primary,

@@ -14,7 +14,11 @@ import useIsTouchDevice from "util/device-detect";
 
 import 'react-vertical-timeline-component/style.min.css';
 
-const useStyles = makeStyles(theme => ({}))
+const useStyles = makeStyles(theme => ({
+    date: {
+        color: "white"
+    }
+}))
 
 export default function Projects(props) {
     const {header, subHeader, cards} = props
@@ -35,6 +39,7 @@ export default function Projects(props) {
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--work"
                                 date="2020"
+                                dateClassName={classes.date}
                                 iconStyle={{ background: ele.color, color: '#fff' }}
                                 icon={<StarIcon />}
                                 key={key}
