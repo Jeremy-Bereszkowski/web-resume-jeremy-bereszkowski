@@ -78,7 +78,7 @@ export default function Footer() {
                     <Grid
                         container
                         direction={"column"}
-                        justify={"flex-start"}
+                        justify={"center"}
                         alignItems={"flex-start"}
                     >
                         <Grid item>
@@ -100,7 +100,7 @@ export default function Footer() {
                     <Grid
                         container
                         direction={"column"}
-                        justify={"flex-end"}
+                        justify={"center"}
                         alignItems={"flex-end"}
                     >
                         <Grid item>
