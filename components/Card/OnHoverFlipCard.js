@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
         height: "260px",
         borderRadius: "4px",
         backgroundColor: Colours.secondary,
-        boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)"
+            boxShadow: "0px 30px 100px -10px rgba(0, 0, 0, 0.4)"
     },
     container: {
         height: "100%",
@@ -29,7 +29,7 @@ export default function OnHoverFlipCard(props) {
 
     const [ref, inView] = useInView({
         triggerOnce: false,
-        threshold: .8,
+        threshold: 1,
     });
 
     const target = React.useRef([])

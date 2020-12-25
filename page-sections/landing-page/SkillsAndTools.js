@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from "prop-types";
-import { useSpring, animated } from 'react-spring'
+import {animated, useSpring} from 'react-spring'
 
 import {makeStyles} from "@material-ui/core/styles"
 import {Avatar} from "@material-ui/core";
