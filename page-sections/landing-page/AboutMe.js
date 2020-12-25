@@ -10,6 +10,7 @@ import Avatar from "@material-ui/core/Avatar";
 import HeaderSubHeaderBody from "components/GridLayouts/HeaderSubHeaderBody";
 
 import {sectionHeight} from "assets/jss/coreStyles";
+import useIsTouchDevice from "../../util/device-detect";
 
 const useStyles = makeStyles(theme => ({
     sectionHeight,
@@ -83,7 +84,7 @@ export default function AboutMe(props) {
                     </Flip>
                 </Grid>
                 <Grid item>
-                    <Roll right>
+                    <Roll right={!useIsTouchDevice()} left={useIsTouchDevice()}>
                         <Avatar className={classes.large}/>
                     </Roll>
                 </Grid>
