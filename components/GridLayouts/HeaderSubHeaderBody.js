@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function HeaderSubHeaderBody(props) {
-    const {header, subHeader, headerColor, style, children} = props
+    const {header, subHeader, headerColor, children} = props
     const classes = useStyles()
 
     const headerClass = headerColor === "light" ? classNames(classes.sectionHeaderText, classes.light) : classes.sectionHeaderText
@@ -33,7 +33,6 @@ export default function HeaderSubHeaderBody(props) {
             justify={"center"}
             alignItems={"stretch"}
             className={classes.container}
-            style={{...style}}
         >
             <Grid item>
                 <h1 className={headerClass}>
@@ -63,7 +62,6 @@ HeaderSubHeaderBody.propTypes = {
     children: PropTypes.node,
     header: PropTypes.string,
     subHeader: PropTypes.string,
-    style: PropTypes.string,
     headerColor: PropTypes.oneOf([
         "light",
         "dark"
