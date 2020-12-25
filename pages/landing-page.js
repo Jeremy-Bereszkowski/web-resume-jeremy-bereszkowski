@@ -37,6 +37,8 @@ const useStyles = makeStyles({
 export default function LandingPage(props) {
     const classes = useStyles();
 
+
+
     return (
         <HeaderFooterLayout>
             <ParallaxLayout image={background} header={data.core.header} body={data.core.body}>
