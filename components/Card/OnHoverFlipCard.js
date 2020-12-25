@@ -15,11 +15,11 @@ const useStyles = makeStyles(theme => ({
         height: "260px",
         borderRadius: "4px",
         backgroundColor: Colours.secondary,
-            boxShadow: "0px 30px 100px -10px rgba(0, 0, 0, 0.4)"
+        boxShadow: "0px 30px 100px -10px rgba(0, 0, 0, 0.4)",
     },
     container: {
         height: "100%",
-        width: "100%"
+        width: "100%",
     }
 }))
 
