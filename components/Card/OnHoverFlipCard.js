@@ -33,7 +33,7 @@ export default function OnHoverFlipCard(props) {
     });
 
     const target = React.useRef([])
-    const isHovering = useHover(target, {enterDelay: 250, leaveDelay: 100})
+    const isHovering = useHover(target, {enterDelay: 150, leaveDelay: 100})
 
     const flipped = isHovering ? false : inView
 

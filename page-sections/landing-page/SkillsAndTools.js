@@ -1,6 +1,6 @@
 import React from 'react'
-import Jump from "react-reveal";
 import PropTypes from "prop-types";
+import { useSpring, animated } from 'react-spring'
 
 import {makeStyles} from "@material-ui/core/styles"
 import {Avatar} from "@material-ui/core";
@@ -16,7 +16,10 @@ const useStyles = makeStyles(theme => ({
     sectionHeight,
     card: {
         maxWidth: "300px",
-        margin: "1vh auto"
+        margin: "1vh auto",
+        "&:hover": {
+            boxShadow: "0px 30px 100px -10px rgba(0, 0, 0, 0.4)"
+        }
     },
     avatar: {
         margin: "2vh 0",
@@ -27,6 +30,9 @@ const useStyles = makeStyles(theme => ({
         textAlign: "center",
     }
 }))
+
+const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
+const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 
 export default function SkillsAndTools(props) {
     const classes = useStyles()
@@ -45,38 +51,46 @@ export default function SkillsAndTools(props) {
                 className={classes.sectionHeight}
             >
                 {
-                    cards.map((ele, key) => (
-                        <Grid xs={12} sm={6} md={6} lg={3} item key={key}>
-                            <Jump>
-                                <Card className={classes.card}>
-                                    <CardActionArea>
-                                        <Grid
-                                            container
-                                            direction={"column"}
-                                            justify={"center"}
-                                            alignItems={"center"}
-                                        >
-                                            <Grid item>
-                                                <Avatar src={ele.logo} className={classes.avatar}/>
+                    cards.map((ele, key) => {
+                        const [animatedProps, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
+
+                        return (
+                            <Grid xs={12} sm={6} md={6} lg={3} item key={key}>
+                                <animated.div
+                                    onMouseMove={({clientX: x, clientY: y}) => set({xys: calc(x, y)})}
+                                    onMouseLeave={() => set({xys: [0, 0, 1]})}
+                                    style={{transform: animatedProps.xys.interpolate(trans)}}
+                                >
+                                    <Card className={classes.card}>
+                                        <CardActionArea>
+                                            <Grid
+                                                container
+                                                direction={"column"}
+                                                justify={"center"}
+                                                alignItems={"center"}
+                                            >
+                                                <Grid item>
+                                                    <Avatar src={ele.logo} className={classes.avatar}/>
+                                                </Grid>
+                                                <Grid item>
+                                                    <h3 className={classes.centerText}>
+                                                        {ele.title}
+                                                    </h3>
+                                                    {
+                                                        ele.list.map((ele, key) => (
+                                                            <h5 className={classes.centerText} key={key}>
+                                                                {ele}
+                                                            </h5>
+                                                        ))
+                                                    }
+                                                </Grid>
                                             </Grid>
-                                            <Grid item>
-                                                <h3 className={classes.centerText}>
-                                                    {ele.title}
-                                                </h3>
-                                                {
-                                                    ele.list.map((ele, key) => (
-                                                        <h5 className={classes.centerText} key={key}>
-                                                            {ele}
-                                                        </h5>
-                                                    ))
-                                                }
-                                            </Grid>
-                                        </Grid>
-                                    </CardActionArea>
-                                </Card>
-                            </Jump>
-                        </Grid>
-                    ))
+                                        </CardActionArea>
+                                    </Card>
+                                </animated.div>
+                            </Grid>
+                        )
+                    })
                 }
             </Grid>
         </HeaderSubHeaderBody>
