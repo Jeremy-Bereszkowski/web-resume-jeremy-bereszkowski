@@ -34,7 +34,7 @@ Router.events.on("routeChangeError", () => {
 config({ ssrFadeout: true });
 
 export default class MyApp extends App {
-    static async getInitialProps({ Component, router, ctx }) {
+    /*static async getInitialProps({ Component, router, ctx }) {
         let pageProps = {};
 
         if (Component.getInitialProps) {
@@ -42,7 +42,7 @@ export default class MyApp extends App {
         }
 
         return { pageProps };
-    }
+    }*/
 
     render() {
         const { Component, pageProps } = this.props;
