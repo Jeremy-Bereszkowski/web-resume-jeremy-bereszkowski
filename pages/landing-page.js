@@ -17,8 +17,6 @@ import {grayColor} from "assets/jss/nextjs-material-kit-pro";
 import data from "assets/data/pages/landing-data"
 import Colours from "assets/strings/colours";
 
-const background = "/background.jpg"
-
 const useStyles = makeStyles({
     padding: {
         padding: "4vh 0",
@@ -39,7 +37,7 @@ export default function LandingPage(props) {
 
     return (
         <HeaderFooterLayout>
-            <ParallaxLayout image={background} header={data.core.header} body={data.core.body}>
+            <ParallaxLayout image={data.core.background} header={data.core.header} body={data.core.body}>
                 <Grid
                     container
                     direction="column"

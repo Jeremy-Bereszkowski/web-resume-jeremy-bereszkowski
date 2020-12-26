@@ -8,8 +8,8 @@ import Parallax from "components/Parallax/Parallax";
 
 import {whiteColor} from "assets/jss/nextjs-material-kit-pro";
 import {greenHrThick, parallaxHeaderText} from "assets/jss/coreStyles";
-import {parallaxSubHeaderText} from "../assets/jss/coreStyles";
-import Colours from "../assets/strings/colours";
+import {parallaxSubHeaderText} from "assets/jss/coreStyles";
+import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles({
     container: {

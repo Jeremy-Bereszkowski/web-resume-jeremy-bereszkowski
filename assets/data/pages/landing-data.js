@@ -15,12 +15,14 @@ const Yoga = "/hobbies/Yoga.png"
 const Bicycle = "/hobbies/Bicycle.png"
 const Camping = "/hobbies/Camping.png"
 
+const background = "/background.jpg"
 const Avatar = "/avatar.png"
 
 const LandingData = {
     core: {
         header: fullName,
         body: "Full-Stack Developer and Hardware Engineer",
+        background: background,
     },
     aboutMe: {
         header: "About Me",

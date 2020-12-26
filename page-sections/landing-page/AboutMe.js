@@ -9,8 +9,9 @@ import Avatar from "@material-ui/core/Avatar";
 
 import HeaderSubHeaderBody from "components/GridLayouts/HeaderSubHeaderBody";
 
+import useIsTouchDevice from "util/device-detect";
+
 import {sectionHeight} from "assets/jss/coreStyles";
-import useIsTouchDevice from "../../util/device-detect";
 
 const useStyles = makeStyles(theme => ({
     sectionHeight,
