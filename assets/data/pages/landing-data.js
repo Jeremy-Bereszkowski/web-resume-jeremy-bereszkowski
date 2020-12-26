@@ -15,6 +15,8 @@ const Yoga = "/hobbies/Yoga.png"
 const Bicycle = "/hobbies/Bicycle.png"
 const Camping = "/hobbies/Camping.png"
 
+const Avatar = "/avatar.png"
+
 const LandingData = {
     core: {
         header: fullName,
@@ -31,7 +33,8 @@ const LandingData = {
                 "I have experience across a wide variety of technology stacks and frameworks, including ReactJS & NextJS, Java & Android and Google Cloud & AWS.",
                 "I have a passion for clean and elegant object-oriented code implemented via an agile scrum workflow.",
             ]
-        }
+        },
+        avatar: Avatar,
     },
     projects: {
         header: "Product and Projects",

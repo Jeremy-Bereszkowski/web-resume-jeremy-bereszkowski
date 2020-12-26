@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function AboutMe(props) {
-    const {header, subHeader, data} = props
+    const {header, subHeader, data, avatar} = props
     const classes = useStyles()
 
     return (
@@ -85,7 +85,10 @@ export default function AboutMe(props) {
                 </Grid>
                 <Grid item>
                     <Roll right={!useIsTouchDevice()} left={useIsTouchDevice()}>
-                        <Avatar className={classes.large}/>
+                        <Avatar
+                            src={avatar}
+                            className={classes.large}
+                        />
                     </Roll>
                 </Grid>
             </Grid>
@@ -97,4 +100,5 @@ AboutMe.propTypes = {
     header: PropTypes.string.isRequired,
     subHeader: PropTypes.string.isRequired,
     data: PropTypes.object,
+    avatar: PropTypes.string,
 }

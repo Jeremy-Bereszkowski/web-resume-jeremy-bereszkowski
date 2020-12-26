@@ -52,6 +52,7 @@ export default function LandingPage(props) {
                             header={data.aboutMe.header}
                             subHeader={data.aboutMe.subHeader}
                             data={data.aboutMe.about}
+                            avatar={data.aboutMe.avatar}
                         />
                     </Grid>
                     <Grid item className={classNames(classes.padding, classes.lightGreyBackground)}>
