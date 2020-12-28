@@ -144,7 +144,18 @@ export default function Header(props) {
       <AppBar className={appBarClasses}>
         <div className={classes.container}>
           {
-            transparent ? null :
+            transparent ?
+                <Grid
+                    container
+                    direction={"row"}
+                    justify={"flex-end"}
+                    alignItems={"center"}
+                >
+                  <Grid item>
+                    <SocialButtonGroup transparent={transparent}/>
+                  </Grid>
+                </Grid>
+                :
                 <Grid
                     container
                     direction={"row"}
