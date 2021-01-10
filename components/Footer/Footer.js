@@ -21,6 +21,7 @@ const useStyles = makeStyles({
             color: whiteColor,
             textDecoration: "none"
         },
+        display: "absolute", zIndex: "8"
     },
     footerBrand: {
         color: Colours.primary,
@@ -35,14 +36,10 @@ const useStyles = makeStyles({
             " 100%)",
         backgroundSize: "550% 450%",
         color: whiteColor,
-        "& p": {
-            color: grayColor[0]
-        },
         "& i": {
             color: whiteColor
         },
-        "& a": {
-            color: whiteColor,
+        "& a, & h3, & h5": {
             opacity: ".86",
             "&:visited": {
                 color: whiteColor
@@ -51,9 +48,6 @@ const useStyles = makeStyles({
                 opacity: 1
             }
         },
-        "& hr": {
-            borderColor: "rgba(" + hexToRgb(whiteColor) + ",0.2)"
-        }
     }
 });
 
@@ -120,14 +114,18 @@ export default function Footer() {
                                 alignItems={"flex-end"}
                             >
                                 <Grid item>
-                                    <h5 className={classes.footerBrand}>
-                                        {FooterData.right.email}
-                                    </h5>
+                                    <a href={"mailto:"+FooterData.right.email}>
+                                        <h5 className={classes.footerBrand}>
+                                            {FooterData.right.email}
+                                        </h5>
+                                    </a>
                                 </Grid>
                                 <Grid item>
-                                    <h5 className={classes.footerBrand}>
-                                        {FooterData.right.phone}
-                                    </h5>
+                                    <a href={"tel:"+FooterData.right.phone}>
+                                        <h5 className={classes.footerBrand}>
+                                            {FooterData.right.phone}
+                                        </h5>
+                                    </a>
                                 </Grid>
                             </Grid>
                         </Grid>
