@@ -17,9 +17,12 @@ import {grayColor} from "assets/jss/nextjs-material-kit-pro";
 import data from "assets/data/pages/landing-data"
 import Colours from "assets/strings/colours";
 
+
 const useStyles = makeStyles({
     padding: {
         padding: "4vh 0",
+        display: "absolute",
+        zIndex: "7",
     },
     baseBackground: {
         backgroundColor: grayColor[14],
@@ -49,7 +52,7 @@ export default function LandingPage(props) {
                     alignItems="stretch"
 
                 >
-                    <Grid item className={classNames(classes.padding, classes.baseBackground)} style={{display: "absolute", zIndex: "7"}}>
+                    <Grid item className={classNames(classes.padding, classes.baseBackground)}>
                         <AboutMe
                             header={data.aboutMe.header}
                             subHeader={data.aboutMe.subHeader}
@@ -64,7 +67,7 @@ export default function LandingPage(props) {
                             cards={data.projects.cards}
                         />
                     </Grid>
-                    <Grid item className={classNames(classes.padding, classes.baseBackground)}>
+                    <Grid item className={classes.padding}>
                         <SkillsAndTools
                             header={data.skills.header}
                             subHeader={data.skills.subHeader}
