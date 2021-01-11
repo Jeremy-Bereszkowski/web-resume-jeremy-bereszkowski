@@ -8,6 +8,7 @@ import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles"
 
 import Colours from "assets/strings/colours";
+import useIsTouchDevice from "../../util/device-detect";
 
 const useStyles = makeStyles(theme => ({
     card: {
@@ -35,11 +36,19 @@ export default function OnHoverFlipCard(props) {
     const target = React.useRef([])
     const isHovering = useHover(target, {enterDelay: 150, leaveDelay: 100})
 
-    const flipped = inView ? isHovering : true
+    let flipped = inView ? isHovering : true
+
+    /*if (useIsTouchDevice()) {
+
+    }*/
+
+    const onClick = () => {
+        flipped = !flipped
+    }
 
     return (
         <div ref={target}>
-            <div style={{margin: "10px"}} ref={ref}>
+            <div style={{margin: "10px"}} ref={ref} onClick={onClick}>
                 <ReactCardFlip  isFlipped={flipped} flipDirection={flipDirection}>
                     <div className={classes.card}>
                         <img src={frontImage} style={{width: "80%", height: "80%", margin: "10% 10%"}}/>
