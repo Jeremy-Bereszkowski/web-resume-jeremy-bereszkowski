@@ -43,7 +43,7 @@ export default function OnHoverFlipCard(props) {
     }*/
 
     const onClick = () => {
-        flipped = !flipped
+        flipped = true
     }
 
     return (
