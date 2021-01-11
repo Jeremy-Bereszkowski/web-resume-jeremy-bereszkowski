@@ -25,6 +25,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function OnHoverFlipCard(props) {
+    const [flipped, setFlipped] = React.useState(true)
     const {frontImage, backText, flipDirection} = props
     const classes = useStyles()
 
@@ -36,25 +37,27 @@ export default function OnHoverFlipCard(props) {
     const target = React.useRef([])
     const isHovering = useHover(target, {enterDelay: 150, leaveDelay: 100})
 
-    let flipped = inView ? isHovering : true
-
-    /*if (useIsTouchDevice()) {
-
-    }*/
+    React.useEffect(() => {
+        if (inView) {
+            setFlipped(isHovering)
+        } else {
+            setFlipped(true)
+        }
+    })
 
     const onClick = () => {
-        flipped = true
+        setFlipped(!flipped)
     }
 
     return (
-        <div ref={target}>
+        <div ref={target} onTouchEnd={onClick}>
             <div style={{margin: "10px"}} ref={ref}>
                 <ReactCardFlip  isFlipped={flipped} flipDirection={flipDirection}>
-                    <div className={classes.card} onTouchEnd={onClick}>
+                    <div className={classes.card}>
                         <img src={frontImage} style={{width: "80%", height: "80%", margin: "10% 10%"}}/>
                     </div>
 
-                    <div className={classes.card} onTouchEnd={onClick}>
+                    <div className={classes.card}>
                         <Grid
                             container
                             direction={"column"}
