@@ -50,14 +50,14 @@ export default function OnHoverFlipCard(props) {
     }
 
     return (
-        <div ref={target} onTouchEnd={onClick}>
+        <div ref={target} onTouchStart={onClick} onClick={onClick}>
             <div style={{margin: "10px"}} ref={ref}>
                 <ReactCardFlip  isFlipped={flipped} flipDirection={flipDirection}>
-                    <div className={classes.card}>
+                    <div className={classes.card} onTouchStart={onClick} onClick={onClick}>
                         <img src={frontImage} style={{width: "80%", height: "80%", margin: "10% 10%"}}/>
                     </div>
 
-                    <div className={classes.card}>
+                    <div className={classes.card} onTouchStart={onClick} onClick={onClick}>
                         <Grid
                             container
                             direction={"column"}
