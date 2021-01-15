@@ -42,6 +42,7 @@ export default function SkillsAndTools(props) {
         <HeaderSubHeaderBody
             header={header}
             subHeader={subHeader}
+            headerColor={"light"}
         >
             <Grid
                 container

@@ -9,13 +9,17 @@ import StarIcon from '@material-ui/icons/Star';
 import BlockButton from "components/Buttons/BlockButton";
 import HeaderSubHeaderBody from "components/GridLayouts/HeaderSubHeaderBody";
 
+import Colours from "assets/strings/colours";
+
 import useIsTouchDevice from "util/device-detect";
 
 import 'react-vertical-timeline-component/style.min.css';
 
 const useStyles = makeStyles(theme => ({
     date: {
-        color: "white"
+        color: Colours.primary,
+        fontWeight: "600!important",
+        fontSize: "1rem!important",
     }
 }))
 
@@ -29,7 +33,6 @@ export default function Projects(props) {
         <HeaderSubHeaderBody
             header={header}
             subHeader={subHeader}
-            headerColor={"light"}
         >
             <VerticalTimeline animate={!animate}>
                 {

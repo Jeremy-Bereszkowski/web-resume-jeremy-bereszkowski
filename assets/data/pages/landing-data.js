@@ -28,10 +28,9 @@ const LandingData = {
         header: "About Me",
         subHeader: "A snapshot of myself",
         about: {
-            header: fullName,
-            subHeader: "I am a full-stack developer and hardware engineer from Melbourne, Australia.",
+            header: `My name is ${fullName},`,
+            subHeader: "I am computer science and engineering student at RMIT from Melbourne, Australia.",
             para: [
-                "I am a RMIT University student of computer science and hardware engineering with a strong focus on full-stack web and mobile development and cloud based ecosystems.",
                 "I have experience across a wide variety of technology stacks and frameworks, including ReactJS & NextJS, Java & Android and Google Cloud & AWS.",
                 "I have a passion for clean and elegant object-oriented code implemented via an agile scrum workflow.",
             ]
@@ -114,23 +113,35 @@ const LandingData = {
             {
                 title: "M. Brodribb Pty Ltd",
                 subTitle: "Office Manager",
-                para: "Data entry specialist, Book keeping, Office manager",
+                location: "Melbourne, Australia",
+                para: [
+                    "Purchase order processing and receipt",
+                    "Creditor accounts management",
+                    "Data entry specialist",
+                    "Assistant accounting & book keeping",
+                ],
+                aside: "M. Brodribb is a Melbourne based specialist engineering firm that designs and manufactures high power conversion and cathodic protection systems.",
                 date: "2018-present",
                 icon: "work",
                 color: 6,
             },
             {
                 title: "Synergo Teknologi",
-                subTitle: "Software Developer",
-                para: "Software Development Intern",
-                para2: "Based in Jakarta, Indonesia.",
+                subTitle: "Software Development Intern",
+                location: "Jakarta, Indonesia",
+                para: [
+                    "Self-driven research, design, implementation and testing of web-based admin facing componentry",
+                    "Interfacing and collaboration with internationally based engineering team",
+                    "Code base review and refactor of string literals"
+                ],
+                aside: "Based in Jakarta, Indonesia; Synergo Teknologi is a SAAS company that develops and markets business management products and solutions.",
                 date: "2018-2019",
                 icon: "work",
                 color: 12,
             },
             {
-                title: "Bachelor of Engineering (Computer Systems and Networking) with Honours/Bachelor of Computer Science",
-                subTitle: "Double Bachelor Degree",
+                title: "RMIT",
+                subTitle: "Bachelor of Engineering (Computer Systems and Networking) with Honours/Bachelor of Computer Science",
                 date: "2016-present",
                 icon: "school",
                 color: 10,
