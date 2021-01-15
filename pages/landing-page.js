@@ -50,7 +50,6 @@ export default function LandingPage(props) {
                     direction="column"
                     justify="center"
                     alignItems="stretch"
-
                 >
                     <Grid item className={classNames(classes.padding, classes.baseBackground)}>
                         <AboutMe
@@ -61,24 +60,24 @@ export default function LandingPage(props) {
                         />
                     </Grid>
                     <Grid item className={classNames(classes.padding, classes.lightGreyBackground)}>
+                        <EducationAndExperienceTimeline
+                            header={data.education.header}
+                            subHeader={data.education.subHeader}
+                            cards={data.education.cards}
+                        />
+                    </Grid>
+                    <Grid item className={classes.padding}>
                         <Projects
                             header={data.projects.header}
                             subHeader={data.projects.subHeader}
                             cards={data.projects.cards}
                         />
                     </Grid>
-                    <Grid item className={classes.padding}>
+                    <Grid item className={classNames(classes.padding, classes.blueGreyBackground)}>
                         <SkillsAndTools
                             header={data.skills.header}
                             subHeader={data.skills.subHeader}
                             cards={data.skills.cards}
-                        />
-                    </Grid>
-                    <Grid item className={classNames(classes.padding, classes.blueGreyBackground)}>
-                        <EducationAndExperienceTimeline
-                            header={data.education.header}
-                            subHeader={data.education.subHeader}
-                            cards={data.education.cards}
                         />
                     </Grid>
                     <Grid item className={classes.padding}>

@@ -29,7 +29,6 @@ export default function Projects(props) {
         <HeaderSubHeaderBody
             header={header}
             subHeader={subHeader}
-            headerColor={"light"}
         >
             <VerticalTimeline animate={!animate}>
                 {
