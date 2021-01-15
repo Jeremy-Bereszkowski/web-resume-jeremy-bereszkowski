@@ -31,7 +31,6 @@ const LandingData = {
             header: `My name is ${fullName},`,
             subHeader: "I am computer science and engineering student at RMIT from Melbourne, Australia.",
             para: [
-                "Currently studying computer science and engineering at RMIT University, I am in the pursuit of .",
                 "I have experience across a wide variety of technology stacks and frameworks, including ReactJS & NextJS, Java & Android and Google Cloud & AWS.",
                 "I have a passion for clean and elegant object-oriented code implemented via an agile scrum workflow.",
             ]

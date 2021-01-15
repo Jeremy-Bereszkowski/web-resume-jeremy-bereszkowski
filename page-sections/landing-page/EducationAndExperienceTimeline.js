@@ -16,6 +16,7 @@ import {grayColor, whiteColor} from "assets/jss/nextjs-material-kit-pro";
 
 import 'react-vertical-timeline-component/style.min.css';
 import Grid from "@material-ui/core/Grid";
+import Colours from "../../assets/strings/colours";
 
 const useStyles = makeStyles(theme => ({
     location: {
@@ -27,6 +28,10 @@ const useStyles = makeStyles(theme => ({
     },
     locationRoot: {
         marginBottom: "4px!important",
+    },
+    date: {
+        fontWeight: "600!important",
+        fontSize: "1rem!important",
     }
 }))
 
@@ -87,6 +92,7 @@ export default function EducationAndExperienceTimeline(props) {
                                 className="vertical-timeline-element--education"
                                 contentStyle={{background: grayColor[3], color: whiteColor}}
                                 date={ele.date}
+                                dateClassName={classes.date}
                                 iconStyle={{background: grayColor[ele.color], color: whiteColor}}
                                 icon={icon}
                                 key={key}
