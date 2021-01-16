@@ -119,7 +119,7 @@ const useStyles = makeStyles(theme => ({
 export default function Header(props) {
   const classes = useStyles();
   const [brandClasses, setBrandClasses] = React.useState(classNames(classes.title, classes.invisible))
-  const [mobileBrandClasses, setMobileBrandClasses] = React.useState(classNames(classes.title, classes.invisible))
+  const [mobileBrandClasses, setMobileBrandClasses] = React.useState(classNames(classes.mobileTitle, classes.invisible))
   const [transparent, setTransparent] = React.useState(true)
   const color = "transparent"
   const changeColorOnScroll = {
@@ -148,6 +148,7 @@ export default function Header(props) {
           .getElementsByTagName("header")[0]
           .classList.add(classes[changeColorOnScroll.color]);
       setBrandClasses(classes.title)
+      setMobileBrandClasses(classes.mobileTitle)
       setTransparent(false)
     } else {
       document.body
@@ -157,6 +158,7 @@ export default function Header(props) {
           .getElementsByTagName("header")[0]
           .classList.remove(classes[changeColorOnScroll.color]);
       setBrandClasses(classNames(classes.title, classes.invisible))
+      setMobileBrandClasses(classNames(classes.mobileTitle, classes.invisible))
       setTransparent(true)
     }
   };
