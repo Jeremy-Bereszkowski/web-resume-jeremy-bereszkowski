@@ -74,6 +74,19 @@ const useStyles = makeStyles(theme => ({
     },
     color: "white",
   },
+  mobileTitle: {
+    letterSpacing: "unset",
+    "&,& a": {
+      ...defaultFont,
+      minWidth: "unset",
+      fontSize: "18px",
+      borderRadius: "3px",
+      textTransform: "none",
+      whiteSpace: "nowrap",
+      color: "inherit",
+    },
+    color: "white",
+  },
   transparent: {
     backgroundColor: "transparent !important",
     boxShadow: "none",
@@ -106,6 +119,7 @@ const useStyles = makeStyles(theme => ({
 export default function Header(props) {
   const classes = useStyles();
   const [brandClasses, setBrandClasses] = React.useState(classNames(classes.title, classes.invisible))
+  const [mobileBrandClasses, setMobileBrandClasses] = React.useState(classNames(classes.title, classes.invisible))
   const [transparent, setTransparent] = React.useState(true)
   const color = "transparent"
   const changeColorOnScroll = {
@@ -157,16 +171,16 @@ export default function Header(props) {
       <Grid
           container
           direction={"column"}
-          justify={"space-evenly"}
-          alignItems={"center"}
+          justify={"flex-start"}
+          alignItems={"flex-start"}
       >
         <Grid item>
-          <h2 className={brandClasses}>
+          <h2 className={mobileBrandClasses}>
             {HeaderData.brand}
           </h2>
         </Grid>
         <Grid item>
-          <h2 className={brandClasses}>
+          <h2 className={mobileBrandClasses}>
             <a
                 className={classNames(classes.link, classes.margin)}
                 href={URLS.PAPER_RESUME}
