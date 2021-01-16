@@ -47,7 +47,7 @@ const LandingData = {
                 para: "A static SPA built in NextJS using MaterialUI for a Physiotherapy Practice based in Melbourne, Australia. Continuous integration is provided by GitHub and Vercel, hosting is provided by Vercel.",
                 date: "2020",
                 text1: "Visit Webpage",
-                href1: "https://move-well-physio.vercel.app/",
+                href1: "https://movewellmelbourne.com.au/",
                 text2: "Source Code",
                 href2: "https://github.com/s3539822/MoveWellPhysio",
                 color: Colours.primary,
@@ -60,7 +60,7 @@ const LandingData = {
                 text1: "App Demo",
                 href1: "",
                 text2: "Source Code",
-                href2: "",
+                href2: "https://github.com/s3539822/PICD-Capstone",
                 color: Colours.primary,
             },
         ]
@@ -142,6 +142,7 @@ const LandingData = {
             {
                 title: "RMIT",
                 subTitle: "Bachelor of Engineering (Computer Systems and Networking) with Honours/Bachelor of Computer Science",
+                location: "Melbourne, Australia",
                 date: "2016-present",
                 icon: "school",
                 color: 10,
@@ -149,6 +150,7 @@ const LandingData = {
             {
                 title: "The King David School",
                 subTitle: "Melbourne, Australia",
+                location: "Melbourne, Australia",
                 date: "2014",
                 icon: "school",
                 color: 4,

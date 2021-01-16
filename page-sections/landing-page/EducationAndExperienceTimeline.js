@@ -30,6 +30,7 @@ const useStyles = makeStyles(theme => ({
         marginBottom: "4px!important",
     },
     date: {
+        color: Colours.primary,
         fontWeight: "600!important",
         fontSize: "1rem!important",
     }
