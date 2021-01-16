@@ -251,7 +251,7 @@ export default function Header(props) {
                     container
                     direction={"row"}
                     justify={"space-between"}
-                    alignItems={"center"}
+                    alignItems={"flex-start"}
                 >
                   <Grid item>
                     {brand}
