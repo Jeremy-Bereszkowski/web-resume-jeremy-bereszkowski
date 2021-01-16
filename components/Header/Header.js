@@ -6,9 +6,11 @@
 import React from "react";
 import classNames from "classnames";
 
-import {Grid} from "@material-ui/core";
+import {Grid, Icon} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
+
+import ScreenShareIcon from '@material-ui/icons/ScreenShare';
 
 import SocialButtonGroup from "../Buttons/SocialButtonGroup";
 
@@ -18,6 +20,9 @@ import {
   hexToRgb, whiteColor,
 } from "assets/jss/nextjs-material-kit-pro";
 import HeaderData from "assets/data/components/header";
+import URLS from "../../assets/strings/urls";
+import FooterButton from "../Buttons/FooterButton";
+import Colours from "../../assets/strings/colours";
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -67,7 +72,8 @@ const useStyles = makeStyles(theme => ({
       textTransform: "none",
       whiteSpace: "nowrap",
       color: "inherit",
-    }
+    },
+    color: "white",
   },
   transparent: {
     backgroundColor: "transparent !important",
@@ -87,6 +93,14 @@ const useStyles = makeStyles(theme => ({
   },
   invisible: {
     color: "transparent",
+  },
+  link: {
+    "&:hover, &:focus": {
+      color: Colours.primary
+    }
+  },
+  margin: {
+    marginLeft: "4px",
   }
 }));
 
@@ -163,12 +177,42 @@ export default function Header(props) {
                     alignItems={"center"}
                 >
                   <Grid item>
-                    <h2 className={brandClasses}>
-                      {HeaderData.brand}
-                    </h2>
+                    <Grid
+                        container
+                        direction={"row"}
+                        justify={"flex-start"}
+                        alignItems={"center"}
+                    >
+                      <Grid item>
+                        <h2 className={brandClasses}>
+                          {HeaderData.brand}
+                        </h2>
+                      </Grid>
+                      <Grid item>
+                        <h2 className={classNames(brandClasses, classes.margin)}>
+                          -
+                        </h2>
+                      </Grid>
+                      <Grid item>
+                        <h2 className={brandClasses}>
+                          <a
+                              className={classNames(classes.link, classes.margin)}
+                              href={URLS.PAPER_RESUME}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                          >
+                            Download CV
+                          </a>
+                        </h2>
+                      </Grid>
+                    </Grid>
+
                   </Grid>
                   <Grid item>
+
+
                     <SocialButtonGroup transparent={transparent}/>
+
                   </Grid>
                 </Grid>
           }

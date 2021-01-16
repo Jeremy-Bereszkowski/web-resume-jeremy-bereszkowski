@@ -23,6 +23,7 @@ export default function SocialButtonGroup(props) {
                 <FooterButton
                     href="https://www.linkedin.com/in/jeremy-bereszkowski-999ba016a/"
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     <i className="fab fa-linkedin-in"/>
                 </FooterButton>
@@ -31,6 +32,7 @@ export default function SocialButtonGroup(props) {
                 <FooterButton
                     href="https://github.com/s3539822"
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     <i className="fab fa-github"/>
                 </FooterButton>

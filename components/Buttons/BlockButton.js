@@ -85,7 +85,13 @@ const BlockButton = React.forwardRef((props, ref) => {
     const buttonClasses = color === "dark" ? classNames(classes.button, classes.dark) : classNames(classes.button, classes.green)
 
     return (
-        <Button {...rest} ref={ref} className={buttonClasses}>
+        <Button
+            {...rest}
+            ref={ref}
+            className={buttonClasses}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
             {children}
         </Button>
     )
