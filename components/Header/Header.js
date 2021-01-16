@@ -86,6 +86,7 @@ const useStyles = makeStyles(theme => ({
       color: "inherit",
     },
     color: "white",
+    margin: "2px 0",
   },
   transparent: {
     backgroundColor: "transparent !important",
@@ -184,7 +185,7 @@ export default function Header(props) {
         <Grid item>
           <h2 className={mobileBrandClasses}>
             <a
-                className={classNames(classes.link, classes.margin)}
+                className={classes.link}
                 href={URLS.PAPER_RESUME}
                 target="_blank"
                 rel="noopener noreferrer"
