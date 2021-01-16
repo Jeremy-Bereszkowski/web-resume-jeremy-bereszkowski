@@ -48,67 +48,65 @@ export default function EducationAndExperienceTimeline(props) {
             headerColor={"light"}
         >
             <VerticalTimeline animate={!animate}>
-                {
-                    cards.map((ele, key) => {
-                        const icon = ele.icon === "school" ? <SchoolIcon/> : <WorkIcon />
+                {cards.map((ele, key) => {
+                    const icon = ele.icon === "school" ? <SchoolIcon/> : <WorkIcon />
 
-                        const location = ele.location !== undefined ? (
-                            <Grid
-                                container
-                                direction={"row"}
-                                alignItems={"center"}
-                                alignContent={"center"}
-                                justify={"flex-start"}
-                                className={classes.locationRoot}
-                            >
-                                <Grid item>
-                                    <RoomIcon fontSize={"small"}/>
-                                </Grid>
-                                <Grid item>
-                                    <h5 className={classes.location}>
-                                        {ele.location}
-                                    </h5>
-                                </Grid>
+                    const location = ele.location !== undefined ? (
+                        <Grid
+                            container
+                            direction={"row"}
+                            alignItems={"center"}
+                            alignContent={"center"}
+                            justify={"flex-start"}
+                            className={classes.locationRoot}
+                        >
+                            <Grid item>
+                                <RoomIcon fontSize={"small"}/>
                             </Grid>
-                        ) : null
+                            <Grid item>
+                                <h5 className={classes.location}>
+                                    {ele.location}
+                                </h5>
+                            </Grid>
+                        </Grid>
+                    ) : null
 
-                        const paraList = ele.para !== undefined ? (
-                            <ul>
-                                {ele.para.map((ele, key) => (
-                                    <li key={key}>
-                                        <h6>{ele}</h6>
-                                    </li>
-                                ))}
-                            </ul>
-                        ) : null
+                    const paraList = ele.para !== undefined ? (
+                        <ul>
+                            {ele.para.map((ele, key) => (
+                                <li key={key}>
+                                    <h6>{ele}</h6>
+                                </li>
+                            ))}
+                        </ul>
+                    ) : null
 
-                        const aside = ele.aside !== undefined ? (
-                            <p>
-                                {ele.aside}
-                            </p>
-                        ) : null
+                    const aside = ele.aside !== undefined ? (
+                        <p>
+                            {ele.aside}
+                        </p>
+                    ) : null
 
-                        return (
-                            <VerticalTimelineElement
-                                className="vertical-timeline-element--education"
-                                contentStyle={{background: grayColor[3], color: whiteColor}}
-                                date={ele.date}
-                                dateClassName={classes.date}
-                                iconStyle={{background: grayColor[ele.color], color: whiteColor}}
-                                icon={icon}
-                                key={key}
-                            >
-                                {location}
-                                <br/>
-                                <h3 className="vertical-timeline-element-title">{ele.title}</h3>
-                                <h4 className="vertical-timeline-element-subtitle">{ele.subTitle}</h4>
-                                {paraList}
-                                <br/>
-                                {aside}
-                            </VerticalTimelineElement>
-                        )
-                    })
-                }
+                    return (
+                        <VerticalTimelineElement
+                            className="vertical-timeline-element--education"
+                            contentStyle={{background: grayColor[3], color: whiteColor}}
+                            date={ele.date}
+                            dateClassName={classes.date}
+                            iconStyle={{background: grayColor[ele.color], color: whiteColor}}
+                            icon={icon}
+                            key={key}
+                        >
+                            {location}
+                            <br/>
+                            <h3 className="vertical-timeline-element-title">{ele.title}</h3>
+                            <h4 className="vertical-timeline-element-subtitle">{ele.subTitle}</h4>
+                            {paraList}
+                            <br/>
+                            {aside}
+                        </VerticalTimelineElement>
+                    )
+                })}
                 <VerticalTimelineElement
                     iconStyle={{ background: grayColor[8], color: whiteColor }}
                     icon={<StarIcon />}
