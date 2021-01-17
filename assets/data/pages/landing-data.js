@@ -57,8 +57,6 @@ const LandingData = {
                 subTitle: "ReactJS, ExpressJS, SQL, Docker",
                 para: "A static SPA built in ReactJS using an ExpressJS backend to communicate with a SQL database. The project was containerized using docker and is hosted via GitHub packages.",
                 date: "2020",
-                text1: "App Demo",
-                href1: "",
                 text2: "Source Code",
                 href2: "https://github.com/s3539822/PICD-Capstone",
                 color: Colours.primary,
@@ -127,7 +125,7 @@ const LandingData = {
             },
             {
                 title: "Synergo Teknologi",
-                subTitle: "Software Development Intern",
+                subTitle: "Software Development Internship",
                 location: "Jakarta, Indonesia",
                 para: [
                     "Self-driven research, design, implementation and testing of web-based admin facing componentry",
@@ -149,7 +147,7 @@ const LandingData = {
             },
             {
                 title: "The King David School",
-                subTitle: "Melbourne, Australia",
+                subTitle: "Year 12",
                 location: "Melbourne, Australia",
                 date: "2014",
                 icon: "school",

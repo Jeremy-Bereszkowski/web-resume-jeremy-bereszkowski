@@ -37,6 +37,33 @@ export default function Projects(props) {
             <VerticalTimeline animate={!animate}>
                 {
                     cards.map((ele, key) => {
+                        const leftButton = ele.href1 !== undefined ? (
+                            <Grid item>
+                                <BlockButton color={"green"} href={ele.href1}>
+                                    {ele.text1}
+                                </BlockButton>
+                            </Grid>
+                        ) : null
+                        const rightButton = ele.href2 !== undefined ? (
+                            <Grid item>
+                                <BlockButton color={"green"} href={ele.href2}>
+                                    {ele.text2}
+                                </BlockButton>
+                            </Grid>
+                        ) : null
+                        const buttonGroup = leftButton || rightButton !== null ? (
+                            <Grid item>
+                                <Grid
+                                    container
+                                    direction={"row"}
+                                    justify={"flex-end"}
+                                    alignItems={"center"}
+                                >
+                                    {leftButton}
+                                    {rightButton}
+                                </Grid>
+                            </Grid>
+                        ) : null
                         return (
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--work"
@@ -70,25 +97,7 @@ export default function Projects(props) {
                                     <Grid item>
                                         <br/>
                                     </Grid>
-                                    <Grid item>
-                                        <Grid
-                                            container
-                                            direction={"row"}
-                                            justify={"flex-end"}
-                                            alignItems={"center"}
-                                        >
-                                            <Grid item>
-                                                <BlockButton color={"green"} href={ele.href1}>
-                                                    {ele.text1}
-                                                </BlockButton>
-                                            </Grid>
-                                            <Grid item>
-                                                <BlockButton color={"green"} href={ele.href2}>
-                                                    {ele.text2}
-                                                </BlockButton>
-                                            </Grid>
-                                        </Grid>
-                                    </Grid>
+                                    {buttonGroup}
                                 </Grid>
                             </VerticalTimelineElement>
                         )
