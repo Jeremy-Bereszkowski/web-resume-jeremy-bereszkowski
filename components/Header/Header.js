@@ -73,6 +73,8 @@ const useStyles = makeStyles(theme => ({
       color: "inherit",
     },
     color: "white",
+    marginTop: "14px!important",
+    marginBottom: "7px!important",
   },
   mobileTitle: {
     letterSpacing: "unset",

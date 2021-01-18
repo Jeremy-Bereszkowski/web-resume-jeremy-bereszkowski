@@ -54,7 +54,7 @@ const LandingData = {
             },
             {
                 title: "PICD Software Managment Tool",
-                subTitle: "ReactJS, ExpressJS, SQL, Docker",
+                subTitle: "ReactJS,  ExpressJS, SQL, Docker",
                 para: "A static SPA built in ReactJS using an ExpressJS backend to communicate with a SQL database. The project was containerized using docker and is hosted via GitHub packages.",
                 date: "2020",
                 text2: "Source Code",
@@ -109,8 +109,22 @@ const LandingData = {
         subHeader: "My previous work history and education",
         cards: [
             {
+                title: "Rafiki Rover Scout Crew",
+                subTitle: "Chairman",
+                location: "Melbourne, Australia",
+                para: [
+                    "Chair bi-monthly board meetings",
+                    "Oversee day-to-day running and operations",
+                    "Legal guardianship over all members at all official events",
+                ],
+                aside: "Rafiki Rover Scout Crew is a member of Scouting Australia, with 20+ current members, Rafiki is an active part of the local community.",
+                date: "2020-present",
+                icon: "work",
+                color: 6,
+            },
+            {
                 title: "M. Brodribb Pty Ltd",
-                subTitle: "Office Manager",
+                subTitle: "Data Entry Specialist",
                 location: "Melbourne, Australia",
                 para: [
                     "Purchase order processing and receipt",
