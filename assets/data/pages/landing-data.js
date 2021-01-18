@@ -29,10 +29,18 @@ const LandingData = {
         subHeader: "A snapshot of myself",
         about: {
             header: `My name is ${fullName},`,
-            subHeader: "and I am a computer science and engineering student at RMIT from Melbourne, Australia.",
+            subHeader: "and I am a computer science and engineering " +
+                "student at RMIT from Melbourne, Australia.",
             para: [
-                "I have experience across a wide variety of technology stacks and frameworks, including ReactJS & NextJS, Java & Android and Google Cloud & AWS.",
-                "I have a passion for clean and elegant object-oriented code implemented via an agile scrum workflow.",
+                "Highly organized and detail-oriented honors student with " +
+                "a strong focus on consumer facing design and experiences.",
+                "Having experience across a wide variety of technologies " +
+                "and frameworks including ReactJS, Android and cloud infrastructures " +
+                "including Google Cloud & AWS.",
+                "Studying a double degree in both software and hardware has " +
+                "provided me with a unique perspective and approach when problem " +
+                "solving projects. I look forward to bringing this distinctive viewpoint" +
+                " into all aspects of my work."
             ]
         },
         avatar: Avatar,
@@ -116,6 +124,7 @@ const LandingData = {
                     "Chair bi-monthly board meetings",
                     "Oversee day-to-day running and operations",
                     "Legal guardianship over all members at all official events",
+                    "Organise and manage weekly meetings",
                 ],
                 aside: "Rafiki Rover Scout Crew is a member of Scouting Australia, with 20+ current members, Rafiki is an active part of the local community.",
                 date: "2020-present",
