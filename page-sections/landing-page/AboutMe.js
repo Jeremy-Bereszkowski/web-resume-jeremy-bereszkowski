@@ -29,6 +29,16 @@ export default function AboutMe(props) {
     const {header, subHeader, data, avatar} = props
     const classes = useStyles()
 
+    const para = data.para.map((ele, key) => (
+        <Grid item key={key} className={classes.container}>
+            <h5>
+                <b>
+                    {ele}
+                </b>
+            </h5>
+        </Grid>
+    ))
+
     return (
         <HeaderSubHeaderBody
             header={header}
@@ -50,6 +60,7 @@ export default function AboutMe(props) {
                             justify={"center"}
                             alignItems={"flex-start"}
                             alignContent={"center"}
+                            style={{paddingRight: "60px"}}
                         >
                             <Grid item className={classes.container}>
                                 <h3>
@@ -64,19 +75,8 @@ export default function AboutMe(props) {
                             <Grid item className={classes.container}>
                                 <br/>
                                 <br/>
-                                <br/>
                             </Grid>
-                            {
-                                data.para.map((ele, key) => (
-                                    <Grid item key={key} className={classes.container}>
-                                        <h5>
-                                            <b>
-                                                {ele}
-                                            </b>
-                                        </h5>
-                                    </Grid>
-                                ))
-                            }
+                            {para}
                             <Grid item>
                                 <br/>
                                 <br/>

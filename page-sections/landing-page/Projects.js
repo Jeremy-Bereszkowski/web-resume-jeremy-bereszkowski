@@ -34,6 +34,9 @@ export default function Projects(props) {
             header={header}
             subHeader={subHeader}
         >
+            <br/>
+            <br/>
+            <br/>
             <VerticalTimeline animate={!animate}>
                 {
                     cards.map((ele, key) => {
