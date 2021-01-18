@@ -6,7 +6,7 @@ const extraSmallFont = {
 }
 
 const smallFont = {
-    fontSize: "calc(16px + (22 - 16) * ((100vw - 300px) / (3000 - 300)))"
+    fontSize: "calc(16px + (24 - 10) * ((100vw - 300px) / (3000 - 300)))"
 }
 
 const mediumFont = {
@@ -51,27 +51,11 @@ const sectionHeaderText = {
 const sectionSubHeaderText = {
     ...smallFont,
     ...sectionText,
-    fontWeight: "300",
+    fontWeight: "350",
 }
 
 const sectionHeight = {
     minHeight: "55vh"
-}
-
-const darkColor = {
-    "&:before": {
-        background: "rgba(" + hexToRgb(blackColor) + ", 0.5)"
-    },
-    "&:after,&:before": {
-        position: "absolute",
-        zIndex: "1",
-        width: "100%",
-        height: "100%",
-        display: "block",
-        left: "0",
-        top: "0",
-        content: "''"
-    }
 }
 
 const greenHrThick = {
@@ -93,8 +77,6 @@ export {
     sectionSubHeaderText,
 
     sectionHeight,
-
-    darkColor,
 
     greenHrThick,
 }

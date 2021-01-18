@@ -17,7 +17,6 @@ import {grayColor} from "assets/jss/nextjs-material-kit-pro";
 import data from "assets/data/pages/landing-data"
 import Colours from "assets/strings/colours";
 
-
 const useStyles = makeStyles({
     padding: {
         padding: "4vh 0",

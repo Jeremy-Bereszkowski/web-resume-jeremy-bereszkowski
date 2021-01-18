@@ -1,17 +1,11 @@
 import React from 'react'
 
-import {makeStyles} from "@material-ui/core/styles"
-
 import LandingHeader from "components/Header/Header";
 import Footer from "components/Footer/Footer";
 
 const topography = "/topography.svg"
 
-
-const useStyles = makeStyles(theme => ({}))
-
 export default function HeaderFooterLayout(props) {
-    const classes = useStyles()
     const {children} = props
 
     return (
