@@ -11,6 +11,7 @@ import Card from "@material-ui/core/Card";
 import HeaderSubHeaderBody from "components/GridLayouts/HeaderSubHeaderBody";
 
 import {sectionHeight} from "assets/jss/coreStyles";
+import useIsTouchDevice from "../../util/device-detect";
 
 const useStyles = makeStyles(theme => ({
     sectionHeight,
@@ -55,40 +56,50 @@ export default function SkillsAndTools(props) {
                     cards.map((ele, key) => {
                         const [animatedProps, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
 
+                        const rootCard = (
+                            <Card className={classes.card}>
+                                <CardActionArea>
+                                    <Grid
+                                        container
+                                        direction={"column"}
+                                        justify={"center"}
+                                        alignItems={"center"}
+                                    >
+                                        <Grid item>
+                                            <Avatar src={ele.logo} className={classes.avatar}/>
+                                        </Grid>
+                                        <Grid item>
+                                            <h3 className={classes.centerText}>
+                                                {ele.title}
+                                            </h3>
+                                            {
+                                                ele.list.map((ele, key) => (
+                                                    <h5 className={classes.centerText} key={key}>
+                                                        {ele}
+                                                    </h5>
+                                                ))
+                                            }
+                                        </Grid>
+                                    </Grid>
+                                </CardActionArea>
+                            </Card>
+                        )
+
+                        const animCard = (
+                            <animated.div
+                                onMouseMove={({clientX: x, clientY: y}) => set({xys: calc(x, y)})}
+                                onMouseLeave={() => set({xys: [0, 0, 1]})}
+                                style={{transform: animatedProps.xys.interpolate(trans)}}
+                            >
+                                {rootCard}
+                            </animated.div>
+                        )
+
+                        const card = useIsTouchDevice() ? rootCard : animCard
+
                         return (
                             <Grid xs={12} sm={6} md={6} lg={3} item key={key}>
-                                <animated.div
-                                    onMouseMove={({clientX: x, clientY: y}) => set({xys: calc(x, y)})}
-                                    onMouseLeave={() => set({xys: [0, 0, 1]})}
-                                    style={{transform: animatedProps.xys.interpolate(trans)}}
-                                >
-                                    <Card className={classes.card}>
-                                        <CardActionArea>
-                                            <Grid
-                                                container
-                                                direction={"column"}
-                                                justify={"center"}
-                                                alignItems={"center"}
-                                            >
-                                                <Grid item>
-                                                    <Avatar src={ele.logo} className={classes.avatar}/>
-                                                </Grid>
-                                                <Grid item>
-                                                    <h3 className={classes.centerText}>
-                                                        {ele.title}
-                                                    </h3>
-                                                    {
-                                                        ele.list.map((ele, key) => (
-                                                            <h5 className={classes.centerText} key={key}>
-                                                                {ele}
-                                                            </h5>
-                                                        ))
-                                                    }
-                                                </Grid>
-                                            </Grid>
-                                        </CardActionArea>
-                                    </Card>
-                                </animated.div>
+                                {card}
                             </Grid>
                         )
                     })
