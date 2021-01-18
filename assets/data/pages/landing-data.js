@@ -46,14 +46,14 @@ const LandingData = {
         avatar: Avatar,
     },
     projects: {
-        header: "Product and Projects",
-        subHeader: "Work Portfolio",
+        header: "Work Portfolio",
+        subHeader: "Product and Projects",
         cards: [
             {
                 title: "MoveWell Physiotherapy",
                 subTitle: "NextJS, MaterialUI",
                 para: "A static SPA built in NextJS using MaterialUI for a Physiotherapy Practice based in Melbourne, Australia. Continuous integration is provided by GitHub and Vercel, hosting is provided by Vercel.",
-                date: "2020",
+                date: "2020-2021",
                 text1: "Visit Webpage",
                 href1: "https://movewellmelbourne.com.au/",
                 text2: "Source Code",
@@ -61,10 +61,10 @@ const LandingData = {
                 color: Colours.primary,
             },
             {
-                title: "PICD Software Managment Tool",
+                title: "PICD Software Management Tool",
                 subTitle: "ReactJS,  ExpressJS, SQL, Docker",
                 para: "A static SPA built in ReactJS using an ExpressJS backend to communicate with a SQL database. The project was containerized using docker and is hosted via GitHub packages.",
-                date: "2020",
+                date: "Mar-Nov 2020",
                 text2: "Source Code",
                 href2: "https://github.com/s3539822/PICD-Capstone",
                 color: Colours.primary,
@@ -117,21 +117,6 @@ const LandingData = {
         subHeader: "My previous jobs and qualifications",
         cards: [
             {
-                title: "Rafiki Rover Scout Crew",
-                subTitle: "Chairman",
-                location: "Melbourne, Australia",
-                para: [
-                    "Chair bi-monthly board meetings",
-                    "Oversee day-to-day running and operations",
-                    "Legal guardianship over all members at all official events",
-                    "Organise and manage weekly meetings",
-                ],
-                aside: "Rafiki Rover Scout Crew is a member of Scouting Australia, with 20+ current members, Rafiki is an active part of the local community.",
-                date: "2020-present",
-                icon: "work",
-                color: 6,
-            },
-            {
                 title: "M. Brodribb Pty Ltd",
                 subTitle: "Data Entry Specialist",
                 location: "Melbourne, Australia",
@@ -159,6 +144,21 @@ const LandingData = {
                 date: "2018-2019",
                 icon: "work",
                 color: 12,
+            },
+            {
+                title: "Rafiki Rover Scout Crew",
+                subTitle: "Chairman",
+                location: "Melbourne, Australia",
+                para: [
+                    "Chair bi-monthly board meetings",
+                    "Oversee day-to-day running and operations",
+                    "Legal guardianship over all members at all official events",
+                    "Organise and manage weekly meetings",
+                ],
+                aside: "Rafiki Rover Scout Crew is a member of Scouting Australia, with 20+ current members, Rafiki is an active part of the local community.",
+                date: "2020-present",
+                icon: "work",
+                color: 6,
             },
             {
                 title: "RMIT University",
