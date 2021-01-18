@@ -29,15 +29,15 @@ const LandingData = {
         subHeader: "A snapshot of myself",
         about: {
             header: `My name is ${fullName},`,
-            subHeader: "and I am a computer science and engineering " +
-                "student at RMIT from Melbourne, Australia.",
+            subHeader: "A computer science and engineering " +
+                "student at RMIT University from Melbourne, Australia.",
             para: [
                 "Highly organized and detail-oriented honors student with " +
                 "a strong focus on consumer facing design and experiences.",
-                "Having experience across a wide variety of technologies " +
+                "Having experience across a wide range of technologies " +
                 "and frameworks including ReactJS, Android and cloud infrastructures " +
-                "including Google Cloud & AWS.",
-                "Studying a double degree in both software and hardware has " +
+                "including AWS & Google Cloud.",
+                "Studying a double degree in both software and hardware, this has " +
                 "provided me with a unique perspective and approach when problem " +
                 "solving projects. I look forward to bringing this distinctive viewpoint" +
                 " into all aspects of my work."
@@ -114,7 +114,7 @@ const LandingData = {
     },
     education: {
         header: "Work Experience and Education",
-        subHeader: "My previous work history and education",
+        subHeader: "My previous jobs and qualifications",
         cards: [
             {
                 title: "Rafiki Rover Scout Crew",
