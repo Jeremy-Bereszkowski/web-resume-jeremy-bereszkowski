@@ -73,7 +73,7 @@ const LandingData = {
     },
     skills: {
         header: "Skills and Tools",
-        subHeader: "My preferred languages and dev tools",
+        subHeader: "What I'm working with right now",
         cards: [
             {
                 title: "Javascript",
