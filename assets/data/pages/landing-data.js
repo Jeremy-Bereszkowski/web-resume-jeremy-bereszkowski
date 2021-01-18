@@ -158,7 +158,7 @@ const LandingData = {
                 aside: "Rafiki Rover Scout Crew is a member of Scouting Australia, with 20+ current members, Rafiki is an active part of the local community.",
                 date: "2020-present",
                 icon: "work",
-                color: 6,
+                color: 10,
             },
             {
                 title: "RMIT University",
@@ -166,7 +166,7 @@ const LandingData = {
                 location: "Melbourne, Australia",
                 date: "2016-present",
                 icon: "school",
-                color: 10,
+                color: 4,
             },
             {
                 title: "The King David School",
@@ -174,7 +174,7 @@ const LandingData = {
                 location: "Melbourne, Australia",
                 date: "2014",
                 icon: "school",
-                color: 4,
+                color: 8,
             }
         ]
     },

@@ -111,7 +111,7 @@ export default function EducationAndExperienceTimeline(props) {
                     )
                 })}
                 <VerticalTimelineElement
-                    iconStyle={{ background: grayColor[8], color: whiteColor }}
+                    iconStyle={{ background: grayColor[5], color: whiteColor }}
                     icon={<StarIcon />}
                 />
             </VerticalTimeline>
