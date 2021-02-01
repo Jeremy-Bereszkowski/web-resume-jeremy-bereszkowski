@@ -29,7 +29,7 @@ export default function Hobbies(props) {
         <HeaderSubHeaderBody
             header={header}
             subHeader={subHeader}
-            headerColor={"green"}
+            headerColor={"ternary"}
         >
             <Grid
                 container
@@ -64,5 +64,5 @@ export default function Hobbies(props) {
 Hobbies.propTypes = {
     header: PropTypes.string.isRequired,
     subHeader: PropTypes.string.isRequired,
-    data: PropTypes.object,
+    data: PropTypes.array,
 }

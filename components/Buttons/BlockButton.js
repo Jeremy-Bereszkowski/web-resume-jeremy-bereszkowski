@@ -120,7 +120,7 @@ BlockButton.propTypes = {
     color: PropTypes.oneOf([
         "green",
         "dark",
-        ,
+        "ternary",
     ])
 };
 
