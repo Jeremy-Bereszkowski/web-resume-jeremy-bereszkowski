@@ -29,6 +29,7 @@ export default function Hobbies(props) {
         <HeaderSubHeaderBody
             header={header}
             subHeader={subHeader}
+            headerColor={"green"}
         >
             <Grid
                 container
