@@ -46,6 +46,7 @@ export default function EducationAndExperienceTimeline(props) {
             header={header}
             subHeader={subHeader}
             headerColor={"light"}
+
         >
             <br/>
             <br/>

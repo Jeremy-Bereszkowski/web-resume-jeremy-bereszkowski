@@ -30,7 +30,7 @@ const useStyles = makeStyles({
         backgroundColor: Colours.secondary,
     },
     blueGreyBackground: {
-        backgroundColor: Colours.primary,
+        backgroundColor: Colours.contrast,
     },
 });
 
@@ -58,7 +58,7 @@ export default function LandingPage(props) {
                             avatar={data.aboutMe.avatar}
                         />
                     </Grid>
-                    <Grid item className={classNames(classes.padding, classes.lightGreyBackground)}>
+                    <Grid item className={classNames(classes.padding, classes.blueGreyBackground)}>
                         <EducationAndExperienceTimeline
                             header={data.education.header}
                             subHeader={data.education.subHeader}
@@ -72,7 +72,7 @@ export default function LandingPage(props) {
                             cards={data.projects.cards}
                         />
                     </Grid>
-                    <Grid item className={classNames(classes.padding, classes.blueGreyBackground)}>
+                    <Grid item className={classNames(classes.padding, classes.lightGreyBackground)}>
                         <SkillsAndTools
                             header={data.skills.header}
                             subHeader={data.skills.subHeader}

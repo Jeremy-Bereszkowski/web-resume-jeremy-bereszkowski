@@ -17,7 +17,7 @@ import 'react-vertical-timeline-component/style.min.css';
 
 const useStyles = makeStyles(theme => ({
     date: {
-        color: Colours.primary,
+        color: Colours.ternary,
         fontWeight: "600!important",
         fontSize: "1rem!important",
     }
@@ -33,6 +33,7 @@ export default function Projects(props) {
         <HeaderSubHeaderBody
             header={header}
             subHeader={subHeader}
+            headerColor={"ternary"}
         >
             <br/>
             <br/>
@@ -42,14 +43,14 @@ export default function Projects(props) {
                     cards.map((ele, key) => {
                         const leftButton = ele.href1 !== undefined ? (
                             <Grid item>
-                                <BlockButton color={"green"} href={ele.href1}>
+                                <BlockButton color={"ternary"} href={ele.href1}>
                                     {ele.text1}
                                 </BlockButton>
                             </Grid>
                         ) : null
                         const rightButton = ele.href2 !== undefined ? (
                             <Grid item>
-                                <BlockButton color={"green"} href={ele.href2}>
+                                <BlockButton color={"ternary"} href={ele.href2}>
                                     {ele.text2}
                                 </BlockButton>
                             </Grid>

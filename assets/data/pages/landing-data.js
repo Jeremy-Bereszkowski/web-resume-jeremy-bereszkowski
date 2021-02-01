@@ -52,7 +52,7 @@ const LandingData = {
                 href1: "https://movewellmelbourne.com.au/",
                 text2: "Source Code",
                 href2: "https://github.com/s3539822/MoveWellPhysio",
-                color: Colours.primary,
+                color: Colours.ternary,
             },
             {
                 title: "PICD Software Management Tool",
@@ -61,7 +61,7 @@ const LandingData = {
                 date: "Mar-Nov 2020",
                 text2: "Source Code",
                 href2: "https://github.com/s3539822/PICD-Capstone",
-                color: Colours.primary,
+                color: Colours.ternary,
             },
         ]
     },

@@ -76,13 +76,31 @@ const useStyles = makeStyles(theme => ({
                 ", 0.2)"
         }
     },
+    ternary: {
+        "&,&:focus,&:hover": {
+            color: whiteColor,
+            backgroundColor: Colours.ternary,
+        },
+        "&:hover,&:focus": {
+            color: Colours.ternary,
+            backgroundColor: Colours.white,
+            boxShadow:
+                "0 14px 26px -12px rgba(" +
+                hexToRgb(grayColor[0]) +
+                ", 0.42), 0 4px 23px 0px rgba(" +
+                hexToRgb(blackColor) +
+                ", 0.12), 0 8px 10px -5px rgba(" +
+                hexToRgb(grayColor[0]) +
+                ", 0.2)"
+        }
+    },
 }))
 
 const BlockButton = React.forwardRef((props, ref) => {
     const {children, color, ...rest} = props
     const classes = useStyles()
 
-    const buttonClasses = color === "dark" ? classNames(classes.button, classes.dark) : classNames(classes.button, classes.green)
+    const buttonClasses = color === "dark" ? classNames(classes.button, classes.dark) : color === "ternary" ? classNames(classes.button, classes.ternary) : classNames(classes.button, classes.green)
 
     return (
         <Button
@@ -102,6 +120,7 @@ BlockButton.propTypes = {
     color: PropTypes.oneOf([
         "green",
         "dark",
+        ,
     ])
 };
 

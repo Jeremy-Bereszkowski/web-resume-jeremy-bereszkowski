@@ -6,6 +6,7 @@ import {makeStyles} from "@material-ui/core/styles"
 import {Grid} from "@material-ui/core";
 
 import {sectionHeaderText, sectionSubHeaderText} from "assets/jss/coreStyles";
+import Colours from "../../assets/strings/colours";
 
 const useStyles = makeStyles(theme => ({
     sectionHeaderText,
@@ -17,14 +18,20 @@ const useStyles = makeStyles(theme => ({
     light: {
         color: "white"
     },
+    green: {
+        color: Colours.contrast,
+    },
+    ternary: {
+        color: Colours.ternary,
+    }
 }))
 
 export default function HeaderSubHeaderBody(props) {
     const {header, subHeader, headerColor, children} = props
     const classes = useStyles()
 
-    const headerClass = headerColor === "light" ? classNames(classes.sectionHeaderText, classes.light) : classes.sectionHeaderText
-    const subHeaderClass = headerColor === "light" ? classNames(classes.sectionSubHeaderText, classes.light) : classes.sectionSubHeaderText
+    const headerClass = headerColor === "light" ? classNames(classes.sectionHeaderText, classes.light) : headerColor === "green" ? classNames(classes.sectionHeaderText, classes.green) : headerColor === "ternary" ? classNames(classes.sectionHeaderText, classes.ternary) : classes.sectionHeaderText
+    const subHeaderClass = headerColor === "light" ? classNames(classes.sectionSubHeaderText, classes.light) : headerColor === "green" ? classNames(classes.sectionSubHeaderText, classes.green) : headerColor === "ternary" ? classNames(classes.sectionSubHeaderText, classes.ternary) : classes.sectionSubHeaderText
 
     return (
         <Grid
@@ -64,7 +71,8 @@ HeaderSubHeaderBody.propTypes = {
     subHeader: PropTypes.string,
     headerColor: PropTypes.oneOf([
         "light",
-        "dark"
+        "dark",
+        "green",
     ])
 }
 
