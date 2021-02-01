@@ -20,6 +20,9 @@ const useStyles = makeStyles(theme => ({
         color: Colours.ternary,
         fontWeight: "600!important",
         fontSize: "1rem!important",
+    },
+    border: {
+        padding: "0 20px",
     }
 }))
 
@@ -38,6 +41,7 @@ export default function Projects(props) {
             <br/>
             <br/>
             <br/>
+            <div className={classes.border}>
             <VerticalTimeline animate={!animate}>
                 {
                     cards.map((ele, key) => {
@@ -66,48 +70,68 @@ export default function Projects(props) {
                                     {leftButton}
                                     {rightButton}
                                 </Grid>
-                            </Grid>
-                        ) : null
-                        return (
-                            <VerticalTimelineElement
-                                className="vertical-timeline-element--work"
-                                date="2020"
-                                dateClassName={classes.date}
-                                iconStyle={{ background: ele.color, color: '#fff' }}
-                                icon={<StarIcon />}
-                                key={key}
-                            >
-                                <Grid
-                                    container
-                                    direction={"column"}
-                                    justify={"center"}
-                                    alignItems={"flex-start"}
-                                >
-                                    <Grid item>
-                                        <h3 className="vertical-timeline-element-title">
-                                            {ele.title}
-                                        </h3>
-                                    </Grid>
-                                    <Grid item>
-                                        <h4 className="vertical-timeline-element-subtitle">
-                                            {ele.subTitle}
-                                        </h4>
-                                    </Grid>
-                                    <Grid item>
-                                        <p>
-                                            {ele.para}
-                                        </p>
-                                    </Grid>
-                                    <Grid item>
-                                        <br/>
-                                    </Grid>
-                                    {buttonGroup}
+                            ) : null
+                            const rightButton = ele.href2 !== undefined ? (
+                                <Grid item>
+                                    <BlockButton color={"green"} href={ele.href2}>
+                                        {ele.text2}
+                                    </BlockButton>
                                 </Grid>
-                            </VerticalTimelineElement>
-                        )
-                    })
-                }
-            </VerticalTimeline>
+                            ) : null
+                            const buttonGroup = leftButton || rightButton !== null ? (
+                                <Grid item>
+                                    <Grid
+                                        container
+                                        direction={"row"}
+                                        justify={"flex-end"}
+                                        alignItems={"center"}
+                                    >
+                                        {leftButton}
+                                        {rightButton}
+                                    </Grid>
+                                </Grid>
+                            ) : null
+                            return (
+                                <VerticalTimelineElement
+                                    className="vertical-timeline-element--work"
+                                    date="2020"
+                                    dateClassName={classes.date}
+                                    iconStyle={{ background: ele.color, color: '#fff' }}
+                                    icon={<StarIcon />}
+                                    key={key}
+                                >
+                                    <Grid
+                                        container
+                                        direction={"column"}
+                                        justify={"center"}
+                                        alignItems={"flex-start"}
+                                    >
+                                        <Grid item>
+                                            <h3 className="vertical-timeline-element-title">
+                                                {ele.title}
+                                            </h3>
+                                        </Grid>
+                                        <Grid item>
+                                            <h4 className="vertical-timeline-element-subtitle">
+                                                {ele.subTitle}
+                                            </h4>
+                                        </Grid>
+                                        <Grid item>
+                                            <p>
+                                                {ele.para}
+                                            </p>
+                                        </Grid>
+                                        <Grid item>
+                                            <br/>
+                                        </Grid>
+                                        {buttonGroup}
+                                    </Grid>
+                                </VerticalTimelineElement>
+                            )
+                        })
+                    }
+                </VerticalTimeline>
+            </div>
         </HeaderSubHeaderBody>
     )
 }

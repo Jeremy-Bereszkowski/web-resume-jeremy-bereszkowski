@@ -88,11 +88,6 @@ export default function Footer() {
                                         {FooterData.left.header}
                                     </h3>
                                 </Grid>
-                                <Grid item>
-                                    <h5 className={classes.footerBrand}>
-                                        {FooterData.left.address}
-                                    </h5>
-                                </Grid>
                             </Grid>
                         </Grid>
                     </Grid>
@@ -116,16 +111,16 @@ export default function Footer() {
                             >
                                 <Grid item>
                                     <a href={"mailto:"+FooterData.right.email}>
-                                        <h5 className={classes.footerBrand}>
+                                        <h4 className={classes.footerBrand}>
                                             {FooterData.right.email}
-                                        </h5>
+                                        </h4>
                                     </a>
                                 </Grid>
                                 <Grid item>
                                     <a href={"tel:"+FooterData.right.phone}>
-                                        <h5 className={classes.footerBrand}>
+                                        <h4 className={classes.footerBrand}>
                                             {FooterData.right.phone}
-                                        </h5>
+                                        </h4>
                                     </a>
                                 </Grid>
                             </Grid>
