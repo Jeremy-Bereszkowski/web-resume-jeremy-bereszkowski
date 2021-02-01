@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
         width: "260px",
         height: "260px",
         borderRadius: "4px",
-        backgroundColor: Colours.contrast,
+        backgroundColor: Colours.ternary,
         boxShadow: "0px 30px 100px -10px rgba(0, 0, 0, 0.4)",
     },
     container: {

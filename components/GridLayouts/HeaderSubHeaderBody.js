@@ -73,6 +73,7 @@ HeaderSubHeaderBody.propTypes = {
         "light",
         "dark",
         "green",
+        "ternary"
     ])
 }
 
