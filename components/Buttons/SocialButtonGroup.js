@@ -6,9 +6,9 @@ import {Grid} from "@material-ui/core";
 
 import FooterButton from "./FooterButton";
 
-import {blackColor, defaultFont, grayColor, hexToRgb, whiteColor} from "../../assets/jss/nextjs-material-kit-pro";
-import URLS from "../../assets/strings/urls";
-import Colours from "../../assets/strings/colours";
+import {defaultFont} from "assets/jss/nextjs-material-kit-pro";
+import URLS from "assets/strings/urls";
+import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles({
     button: {
