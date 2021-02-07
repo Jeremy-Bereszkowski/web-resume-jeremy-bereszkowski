@@ -50,20 +50,21 @@ export default function SocialButtonGroup(props) {
             alignItems={"center"}
         >
             <Grid item>
-                <Link href={"https://www.linkedin.com/in/jeremy-bereszkowski-999ba016a/"}>
+                <Link
+                    href={URLS.PAPER_RESUME}
+                >
                     <FooterButton
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         <h2 className={classes.title}>
-                            <a
+                            {/*<a
                                 className={classNames(classes.link, classes.margin)}
-                                href={URLS.PAPER_RESUME}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
+                            >*/}
+                            <b>
                                 CV
-                            </a>
+                            </b>
+                            {/*</a>*/}
                         </h2>
                     </FooterButton>
                 </Link>
