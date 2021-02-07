@@ -12,7 +12,7 @@ import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles({
     button: {
-        margin: ".3125rem 1px",
+        margin: ".312rem 8px",
         textTransform: "uppercase",
         letterSpacing: "0",
         textAlign: "center", whiteSpace: "nowrap",
@@ -24,15 +24,16 @@ const useStyles = makeStyles({
             ...defaultFont,
             minWidth: "unset",
             lineHeight: "30px",
-            fontSize: "18px",
+            fontSize: "20px",
+            fontWeight: "400",
             borderRadius: "3px",
             textTransform: "none",
             whiteSpace: "nowrap",
             color: "inherit",
         },
         color: "white",
-        marginTop: "14px!important",
-        marginBottom: "7px!important",
+        marginTop: "12px!important",
+        marginBottom: "8px!important",
     },
     link: {
         "&:hover, &:focus": {
@@ -44,7 +45,7 @@ const useStyles = makeStyles({
     }
 });
 
-export default function SocialButtonGroup(props) {
+export default function SocialButtonGroup() {
     const classes = useStyles();
 
     return (
