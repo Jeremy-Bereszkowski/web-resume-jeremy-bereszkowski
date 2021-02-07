@@ -35,6 +35,11 @@ const useStyles = makeStyles({
         marginTop: "12px!important",
         marginBottom: "8px!important",
     },
+    link: {
+        "&:hover, &:focus": {
+            color: Colours.white,
+        }
+    },
     margin: {
         marginLeft: "4px",
     }
@@ -54,7 +59,7 @@ export default function SocialButtonGroup() {
             <Grid item>
                 <h2 className={classNames(classes.title, classes.button)}>
                     <a
-                        className={classes.margin}
+                        className={classNames(classes.link, classes.margin)}
                         href={URLS.PAPER_RESUME}
                         target="_blank"
                         rel="noopener noreferrer"
