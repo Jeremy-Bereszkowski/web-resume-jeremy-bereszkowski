@@ -25,7 +25,7 @@ const useStyles = makeStyles({
         zIndex: "8"
     },
     footerBrand: {
-        color: Colours.primary,
+        color: Colours.white,
         margin: "0",
     },
     dark: {
