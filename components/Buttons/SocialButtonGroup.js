@@ -17,9 +17,6 @@ const useStyles = makeStyles({
         letterSpacing: "0",
         textAlign: "center", whiteSpace: "nowrap",
         verticalAlign: "middle",
-        "&:hover": {
-            color: Colours.primary,
-        }
     },
     title: {
         letterSpacing: "unset",
