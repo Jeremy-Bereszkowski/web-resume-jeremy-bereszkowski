@@ -5,8 +5,8 @@ const FooterData = {
         header: fullName,
     },
     right: {
-        email: "Email: " + email,
-        phone: "Mobile: " + phone,
+        email: "Email:",
+        phone: "Mobile:",
     }
 }
 

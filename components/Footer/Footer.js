@@ -9,6 +9,8 @@ import SocialButtonGroup from "components/Buttons/SocialButtonGroup";
 import {grayColor, whiteColor} from "assets/jss/nextjs-material-kit-pro";
 import FooterData from "assets/data/components/footer";
 import Colours from "assets/strings/colours";
+import {email, phone} from "../../assets/data/global";
+import DataLink from "../Links/ExternalLink";
 
 const useStyles = makeStyles({
     footer: {
@@ -110,18 +112,28 @@ export default function Footer() {
                                 alignItems={"flex-end"}
                             >
                                 <Grid item>
-                                    <a href={"mailto:"+FooterData.right.email}>
+                                    {/*<a href={"mailto:"+FooterData.right.email}>
                                         <h4 className={classes.footerBrand}>
                                             {FooterData.right.email}
                                         </h4>
-                                    </a>
+                                    </a>*/}
+                                    <DataLink
+                                        data={email}
+                                        mail={true}
+                                        label={FooterData.right.email}
+                                    />
                                 </Grid>
                                 <Grid item>
-                                    <a href={"tel:"+FooterData.right.phone}>
+                                    <DataLink
+                                        data={phone}
+                                        mobile={true}
+                                        label={FooterData.right.phone}
+                                    />
+                                    {/*<a href={"tel:"+FooterData.right.phone}>
                                         <h4 className={classes.footerBrand}>
                                             {FooterData.right.phone}
                                         </h4>
-                                    </a>
+                                    </a>*/}
                                 </Grid>
                             </Grid>
                         </Grid>
