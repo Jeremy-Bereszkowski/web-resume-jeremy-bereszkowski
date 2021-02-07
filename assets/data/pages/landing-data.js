@@ -51,7 +51,7 @@ const LandingData = {
                 text1: "Visit Webpage",
                 href1: "https://malkinew.com.au/",
                 text2: "Source Code",
-                href2: "https://github.com/s3539822/MoveWellPhysio",
+                href2: "https://github.com/s3539822/malki_new_personal_website",
                 color: Colours.ternary,
             },
             {
