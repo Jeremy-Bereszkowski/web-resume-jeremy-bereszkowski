@@ -80,7 +80,7 @@ const useStyles = makeStyles({
   white: {
     "&,&:focus,&:hover": {
       backgroundColor: whiteColor,
-      color: grayColor[0]
+      color: Colours.primary,
     }
   },
   simple: {
