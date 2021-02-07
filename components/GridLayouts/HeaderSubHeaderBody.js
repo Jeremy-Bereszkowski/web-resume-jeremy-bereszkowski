@@ -41,20 +41,20 @@ export default function HeaderSubHeaderBody(props) {
 
     switch (headerColor) {
         case "light":
-            classNames(classes.sectionHeaderText, classes.light)
-            classNames(classes.sectionSubHeaderText, classes.light)
+            headerClass = classNames(classes.sectionHeaderText, classes.light)
+            subHeaderClass = classNames(classes.sectionSubHeaderText, classes.light)
             break;
         case "green":
-            classNames(classes.sectionHeaderText, classes.green)
-            classNames(classes.sectionSubHeaderText, classes.green)
+            headerClass = classNames(classes.sectionHeaderText, classes.green)
+            subHeaderClass = classNames(classes.sectionSubHeaderText, classes.green)
             break;
         case "ternary":
-            classNames(classes.sectionHeaderText, classes.ternary)
-            classNames(classes.sectionSubHeaderText, classes.ternary)
+            headerClass = classNames(classes.sectionHeaderText, classes.ternary)
+            subHeaderClass = classNames(classes.sectionSubHeaderText, classes.ternary)
             break;
         case "gold":
-            classNames(classes.sectionHeaderText, classes.gold)
-            classNames(classes.sectionSubHeaderText, classes.gold)
+            headerClass = classNames(classes.sectionHeaderText, classes.gold)
+            subHeaderClass = classNames(classes.sectionSubHeaderText, classes.gold)
             break;
     }
 
