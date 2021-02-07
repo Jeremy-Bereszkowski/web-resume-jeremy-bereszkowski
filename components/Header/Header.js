@@ -172,72 +172,11 @@ export default function Header(props) {
     [classes.fixed]: true
   });
 
-  const mobileBrand = () => (
-      <Grid
-          container
-          direction={"column"}
-          justify={"flex-start"}
-          alignItems={"flex-start"}
-      >
-        <Grid item>
-          <h2 className={mobileBrandClasses}>
-            {HeaderData.brand}
-          </h2>
-        </Grid>
-        <Grid item>
-          <h2 className={mobileBrandClasses}>
-            <a
-                className={classes.link}
-                href={URLS.PAPER_RESUME}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-              Download CV
-            </a>
-          </h2>
-        </Grid>
-      </Grid>
-  )
-
-  const desktopBrand = () => (
-      <Grid
-          container
-          direction={"row"}
-          justify={"space-evenly"}
-          alignItems={"center"}
-      >
-        <Grid item>
-          <h2 className={brandClasses}>
-            {HeaderData.brand}
-          </h2>
-        </Grid>
-        <Grid item>
-          <h2 className={classNames(brandClasses, classes.margin)}>
-            -
-          </h2>
-        </Grid>
-        <Grid item>
-          <h2 className={brandClasses}>
-            <a
-                className={classNames(classes.link, classes.margin)}
-                href={URLS.PAPER_RESUME}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-              Download CV
-            </a>
-          </h2>
-        </Grid>
-      </Grid>
-  )
-
-  const brand = useIsTouchDevice() ? mobileBrand() : desktopBrand()
-
   return (
       <AppBar className={appBarClasses}>
         <div className={classes.container}>
           {
-            transparent ?
+            transparent ? (
                 <Grid
                     container
                     direction={"row"}
@@ -248,7 +187,7 @@ export default function Header(props) {
                     <SocialButtonGroup transparent={transparent}/>
                   </Grid>
                 </Grid>
-                :
+            ) : (
                 <Grid
                     container
                     direction={"row"}
@@ -256,12 +195,15 @@ export default function Header(props) {
                     alignItems={"flex-start"}
                 >
                   <Grid item>
-                    {brand}
+                    <h2 className={brandClasses}>
+                      {HeaderData.brand}
+                    </h2>
                   </Grid>
                   <Grid item>
                     <SocialButtonGroup transparent={transparent}/>
                   </Grid>
                 </Grid>
+            )
           }
         </div>
       </AppBar>
