@@ -23,7 +23,10 @@ const useStyles = makeStyles(theme => ({
     },
     ternary: {
         color: Colours.ternary,
-    }
+    },
+    gold: {
+        color: Colours.quadry,
+    },
 }))
 
 export default function HeaderSubHeaderBody(props) {
@@ -48,6 +51,10 @@ export default function HeaderSubHeaderBody(props) {
         case "ternary":
             classNames(classes.sectionHeaderText, classes.ternary)
             classNames(classes.sectionSubHeaderText, classes.ternary)
+            break;
+        case "gold":
+            classNames(classes.sectionHeaderText, classes.gold)
+            classNames(classes.sectionSubHeaderText, classes.gold)
             break;
     }
 
