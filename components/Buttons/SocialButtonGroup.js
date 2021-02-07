@@ -14,6 +14,18 @@ export default function SocialButtonGroup(props) {
             alignItems={"center"}
         >
             <Grid item>
+                {/*<FooterButton
+                    href="https://www.linkedin.com/in/jeremy-bereszkowski-999ba016a/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i className="fab fa-linkedin-in"/>
+                </FooterButton>*/}
+                <a>
+                    CV
+                </a>
+            </Grid>
+            <Grid item>
                 <FooterButton
                     href="https://www.linkedin.com/in/jeremy-bereszkowski-999ba016a/"
                     target="_blank"
