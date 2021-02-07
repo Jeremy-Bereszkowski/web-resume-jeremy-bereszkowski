@@ -29,6 +29,9 @@ const useStyles = makeStyles({
     footerBrand: {
         color: Colours.white,
         margin: "0",
+        "&:hover": {
+            color: Colours.primary,
+        }
     },
     dark: {
         background:
@@ -112,11 +115,6 @@ export default function Footer() {
                                 alignItems={"flex-end"}
                             >
                                 <Grid item>
-                                    {/*<a href={"mailto:"+FooterData.right.email}>
-                                        <h4 className={classes.footerBrand}>
-                                            {FooterData.right.email}
-                                        </h4>
-                                    </a>*/}
                                     <DataLink
                                         data={email}
                                         mail={true}
@@ -129,11 +127,6 @@ export default function Footer() {
                                         mobile={true}
                                         label={FooterData.right.phone}
                                     />
-                                    {/*<a href={"tel:"+FooterData.right.phone}>
-                                        <h4 className={classes.footerBrand}>
-                                            {FooterData.right.phone}
-                                        </h4>
-                                    </a>*/}
                                 </Grid>
                             </Grid>
                         </Grid>

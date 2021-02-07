@@ -6,6 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 
 import {blackColor, grayColor, hexToRgb, whiteColor,} from "../../assets/jss/nextjs-material-kit-pro";
+import Colours from "../../assets/strings/colours";
 
 const useStyles = makeStyles({
   button: {
@@ -40,7 +41,7 @@ const useStyles = makeStyles({
     touchAction: "manipulation",
     cursor: "pointer",
     "&:hover,&:focus": {
-      color: whiteColor,
+      color: Colours.primary,
       backgroundColor: grayColor[0],
       boxShadow:
           "0 14px 26px -12px rgba(" +
