@@ -21,9 +21,17 @@ export default function SocialButtonGroup(props) {
                 >
                     <i className="fab fa-linkedin-in"/>
                 </FooterButton>*/}
-                <a>
-                    CV
-                </a>
+                <FooterButton
+                    href="https://www.linkedin.com/in/jeremy-bereszkowski-999ba016a/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i>
+                        <h4>
+                            CV
+                        </h4>
+                    </i>
+                </FooterButton>
             </Grid>
             <Grid item>
                 <FooterButton
