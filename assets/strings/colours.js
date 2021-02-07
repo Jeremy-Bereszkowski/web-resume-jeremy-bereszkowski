@@ -8,6 +8,7 @@ const Colours = {
     darkGrey: grayColor[3],
     contrast: "#567567",
     ternary: "#695675",
+    quadry: "#756956",
 }
 
 export default Colours
