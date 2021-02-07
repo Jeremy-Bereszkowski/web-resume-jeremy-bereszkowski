@@ -71,7 +71,7 @@ export default function Projects(props) {
                         return (
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--work"
-                                date="2020"
+                                date={ele.date}
                                 dateClassName={classes.date}
                                 iconStyle={{ background: ele.color, color: '#fff' }}
                                 icon={<StarIcon />}
