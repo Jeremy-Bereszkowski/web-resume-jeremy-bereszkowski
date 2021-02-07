@@ -9,7 +9,6 @@ import FooterButton from "./FooterButton";
 import {defaultFont} from "../../assets/jss/nextjs-material-kit-pro";
 import URLS from "../../assets/strings/urls";
 import Colours from "../../assets/strings/colours";
-import Link from "next/link";
 
 const useStyles = makeStyles({
     title: {
@@ -50,24 +49,21 @@ export default function SocialButtonGroup(props) {
             alignItems={"center"}
         >
             <Grid item>
-                <Link
-                    href={URLS.PAPER_RESUME}
-                >
-                    <FooterButton
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <h2 className={classes.title}>
-                            {/*<a
-                                className={classNames(classes.link, classes.margin)}
-                            >*/}
-                            <b>
-                                CV
-                            </b>
-                            {/*</a>*/}
-                        </h2>
-                    </FooterButton>
-                </Link>
+                {/*<FooterButton
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >*/}
+                    <h2 className={classes.title}>
+                        <a
+                            className={classNames(classes.link, classes.margin)}
+                            href={URLS.PAPER_RESUME}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            CV
+                        </a>
+                    </h2>
+                {/*</FooterButton>*/}
             </Grid>
             <Grid item>
                 <FooterButton
