@@ -44,6 +44,17 @@ const LandingData = {
         subHeader: "Product and Projects",
         cards: [
             {
+                title: "Malki New",
+                subTitle: "NextJS, MaterialUI",
+                para: "A static SPA built in NextJS using MaterialUI for a Physiotherapy Practice based in Melbourne, Australia. Continuous integration is provided by GitHub and Vercel, hosting is provided by Vercel.",
+                date: "2021",
+                text1: "Visit Webpage",
+                href1: "https://malkinew.com.au/",
+                text2: "Source Code",
+                href2: "https://github.com/s3539822/malki_new_personal_website",
+                color: Colours.ternary,
+            },
+            {
                 title: "MoveWell Physiotherapy",
                 subTitle: "NextJS, MaterialUI",
                 para: "A static SPA built in NextJS using MaterialUI for a Physiotherapy Practice based in Melbourne, Australia. Continuous integration is provided by GitHub and Vercel, hosting is provided by Vercel.",
