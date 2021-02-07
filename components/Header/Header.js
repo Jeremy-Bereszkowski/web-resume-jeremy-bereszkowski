@@ -12,18 +12,14 @@ import AppBar from "@material-ui/core/AppBar";
 
 import SocialButtonGroup from "../Buttons/SocialButtonGroup";
 
-import useIsTouchDevice from "util/device-detect";
-
 import {
   blackColor,
   defaultFont, grayColor,
   hexToRgb, whiteColor,
 } from "assets/jss/nextjs-material-kit-pro";
 import HeaderData from "assets/data/components/header";
-import URLS from "assets/strings/urls";
-import Colours from "assets/strings/colours";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
   appBar: {
     display: "flex",
     border: "0",
@@ -76,20 +72,6 @@ const useStyles = makeStyles(theme => ({
     marginTop: "14px!important",
     marginBottom: "7px!important",
   },
-  mobileTitle: {
-    letterSpacing: "unset",
-    "&,& a": {
-      ...defaultFont,
-      minWidth: "unset",
-      fontSize: "18px",
-      borderRadius: "3px",
-      textTransform: "none",
-      whiteSpace: "nowrap",
-      color: "inherit",
-    },
-    color: "white",
-    margin: "2px 0",
-  },
   transparent: {
     backgroundColor: "transparent !important",
     boxShadow: "none",
@@ -109,20 +91,11 @@ const useStyles = makeStyles(theme => ({
   invisible: {
     color: "transparent",
   },
-  link: {
-    "&:hover, &:focus": {
-      color: Colours.primary
-    }
-  },
-  margin: {
-    marginLeft: "4px",
-  }
-}));
+});
 
-export default function Header(props) {
+export default function Header() {
   const classes = useStyles();
   const [brandClasses, setBrandClasses] = React.useState(classNames(classes.title, classes.invisible))
-  const [mobileBrandClasses, setMobileBrandClasses] = React.useState(classNames(classes.mobileTitle, classes.invisible))
   const [transparent, setTransparent] = React.useState(true)
   const color = "transparent"
   const changeColorOnScroll = {
@@ -151,7 +124,6 @@ export default function Header(props) {
           .getElementsByTagName("header")[0]
           .classList.add(classes[changeColorOnScroll.color]);
       setBrandClasses(classes.title)
-      setMobileBrandClasses(classes.mobileTitle)
       setTransparent(false)
     } else {
       document.body
@@ -161,7 +133,6 @@ export default function Header(props) {
           .getElementsByTagName("header")[0]
           .classList.remove(classes[changeColorOnScroll.color]);
       setBrandClasses(classNames(classes.title, classes.invisible))
-      setMobileBrandClasses(classNames(classes.mobileTitle, classes.invisible))
       setTransparent(true)
     }
   };
@@ -172,72 +143,11 @@ export default function Header(props) {
     [classes.fixed]: true
   });
 
-  const mobileBrand = () => (
-      <Grid
-          container
-          direction={"column"}
-          justify={"flex-start"}
-          alignItems={"flex-start"}
-      >
-        <Grid item>
-          <h2 className={mobileBrandClasses}>
-            {HeaderData.brand}
-          </h2>
-        </Grid>
-        <Grid item>
-          <h2 className={mobileBrandClasses}>
-            <a
-                className={classes.link}
-                href={URLS.PAPER_RESUME}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-              Download CV
-            </a>
-          </h2>
-        </Grid>
-      </Grid>
-  )
-
-  const desktopBrand = () => (
-      <Grid
-          container
-          direction={"row"}
-          justify={"space-evenly"}
-          alignItems={"center"}
-      >
-        <Grid item>
-          <h2 className={brandClasses}>
-            {HeaderData.brand}
-          </h2>
-        </Grid>
-        <Grid item>
-          <h2 className={classNames(brandClasses, classes.margin)}>
-            -
-          </h2>
-        </Grid>
-        <Grid item>
-          <h2 className={brandClasses}>
-            <a
-                className={classNames(classes.link, classes.margin)}
-                href={URLS.PAPER_RESUME}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-              Download CV
-            </a>
-          </h2>
-        </Grid>
-      </Grid>
-  )
-
-  const brand = useIsTouchDevice() ? mobileBrand() : desktopBrand()
-
   return (
       <AppBar className={appBarClasses}>
         <div className={classes.container}>
           {
-            transparent ?
+            transparent ? (
                 <Grid
                     container
                     direction={"row"}
@@ -248,7 +158,7 @@ export default function Header(props) {
                     <SocialButtonGroup transparent={transparent}/>
                   </Grid>
                 </Grid>
-                :
+            ) : (
                 <Grid
                     container
                     direction={"row"}
@@ -256,12 +166,15 @@ export default function Header(props) {
                     alignItems={"flex-start"}
                 >
                   <Grid item>
-                    {brand}
+                    <h2 className={brandClasses}>
+                      {HeaderData.brand}
+                    </h2>
                   </Grid>
                   <Grid item>
                     <SocialButtonGroup transparent={transparent}/>
                   </Grid>
                 </Grid>
+            )
           }
         </div>
       </AppBar>
