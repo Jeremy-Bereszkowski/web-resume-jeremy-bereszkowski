@@ -33,9 +33,6 @@ export default function HeaderSubHeaderBody(props) {
     const {header, subHeader, headerColor, children} = props
     const classes = useStyles()
 
-    /*const headerClass = headerColor === "light" ? classNames(classes.sectionHeaderText, classes.light) : headerColor === "green" ? classNames(classes.sectionHeaderText, classes.green) : headerColor === "ternary" ? classNames(classes.sectionHeaderText, classes.ternary) : classes.sectionHeaderText*/
-    /*const subHeaderClass = headerColor === "light" ? classNames(classes.sectionSubHeaderText, classes.light) : headerColor === "green" ? classNames(classes.sectionSubHeaderText, classes.green) : headerColor === "ternary" ? classNames(classes.sectionSubHeaderText, classes.ternary) : classes.sectionSubHeaderText*/
-
     let headerClass = classes.sectionHeaderText
     let subHeaderClass = classes.sectionSubHeaderText
 
