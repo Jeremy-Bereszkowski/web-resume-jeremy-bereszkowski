@@ -12,13 +12,9 @@ import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles({
     button: {
-        padding: "12px 30px",
         margin: ".3125rem 1px",
-        fontSize: "12px",
-        fontWeight: "400",
         textTransform: "uppercase",
         letterSpacing: "0",
-        lineHeight: "1.42857143",
         textAlign: "center", whiteSpace: "nowrap",
         verticalAlign: "middle",
     },
