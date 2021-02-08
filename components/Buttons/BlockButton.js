@@ -5,10 +5,10 @@ import classNames from "classnames"
 import {makeStyles} from "@material-ui/core/styles"
 import Button from "@material-ui/core/Button";
 
-import {blackColor, grayColor, hexToRgb, whiteColor} from "assets/jss/nextjs-material-kit-pro";
+import {grayColor, hexToRgb, whiteColor} from "assets/jss/nextjs-material-kit-pro";
 import Colours from "assets/strings/colours";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
     button: {
         minHeight: "auto",
         minWidth: "auto",
@@ -52,7 +52,7 @@ const useStyles = makeStyles(theme => ({
                 "0 14px 26px -12px rgba(" +
                 hexToRgb(grayColor[0]) +
                 ", 0.42), 0 4px 23px 0px rgba(" +
-                hexToRgb(blackColor) +
+                hexToRgb(Colours.black) +
                 ", 0.12), 0 8px 10px -5px rgba(" +
                 hexToRgb(grayColor[0]) +
                 ", 0.2)"
@@ -70,7 +70,7 @@ const useStyles = makeStyles(theme => ({
                 "0 14px 26px -12px rgba(" +
                 hexToRgb(grayColor[0]) +
                 ", 0.42), 0 4px 23px 0px rgba(" +
-                hexToRgb(blackColor) +
+                hexToRgb(Colours.black) +
                 ", 0.12), 0 8px 10px -5px rgba(" +
                 hexToRgb(grayColor[0]) +
                 ", 0.2)"
@@ -88,13 +88,13 @@ const useStyles = makeStyles(theme => ({
                 "0 14px 26px -12px rgba(" +
                 hexToRgb(grayColor[0]) +
                 ", 0.42), 0 4px 23px 0px rgba(" +
-                hexToRgb(blackColor) +
+                hexToRgb(Colours.black) +
                 ", 0.12), 0 8px 10px -5px rgba(" +
                 hexToRgb(grayColor[0]) +
                 ", 0.2)"
         }
     },
-}))
+})
 
 const BlockButton = React.forwardRef((props, ref) => {
     const {children, color, ...rest} = props

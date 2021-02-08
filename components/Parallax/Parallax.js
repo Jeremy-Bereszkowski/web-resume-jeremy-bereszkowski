@@ -4,7 +4,8 @@ import PropTypes from "prop-types";
 
 import { makeStyles } from "@material-ui/core/styles";
 
-import {blackColor, hexToRgb} from "assets/jss/nextjs-material-kit-pro";
+import {hexToRgb} from "assets/jss/nextjs-material-kit-pro";
+import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles({
   parallax: {
@@ -23,7 +24,7 @@ const useStyles = makeStyles({
   filter: {},
   darkColor: {
     "&:before": {
-      background: "rgba(" + hexToRgb(blackColor) + ", 0.5)"
+      background: "rgba(" + hexToRgb(Colours.black) + ", 0.5)"
     },
     "&:after,&:before": {
       position: "absolute",

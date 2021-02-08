@@ -5,8 +5,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 
 import {
   infoColor,
-  whiteColor,
-  title
+  grayColor
 } from "assets/jss/nextjs-material-kit-pro.js";
 
 const useStyles = makeStyles({
@@ -28,8 +27,12 @@ const useStyles = makeStyles({
     display: "block"
   },
   title: {
-    ...title,
-    color: whiteColor
+    color: grayColor[1],
+    textDecoration: "none",
+    fontWeight: "700",
+    marginTop: "30px",
+    marginBottom: "25px",
+    minHeight: "32px",
   }
 });
 

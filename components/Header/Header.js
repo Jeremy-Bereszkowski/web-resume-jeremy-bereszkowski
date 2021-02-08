@@ -13,10 +13,10 @@ import AppBar from "@material-ui/core/AppBar";
 import SocialButtonGroup from "../Buttons/SocialButtonGroup";
 
 import {
-  blackColor,
   defaultFont, grayColor,
   hexToRgb, whiteColor,
 } from "assets/jss/nextjs-material-kit-pro";
+import Colours from "assets/strings/colours";
 import HeaderData from "assets/data/components/header";
 
 const useStyles = makeStyles({
@@ -31,9 +31,9 @@ const useStyles = makeStyles({
     backgroundColor: whiteColor,
     boxShadow:
         "0 4px 18px 0px rgba(" +
-        hexToRgb(blackColor) +
+        hexToRgb(Colours.black) +
         ", 0.12), 0 7px 10px -5px rgba(" +
-        hexToRgb(blackColor) +
+        hexToRgb(Colours.black) +
         ", 0.15)",
     transition: "all 150ms ease 0s",
     alignItems: "center",
@@ -83,7 +83,7 @@ const useStyles = makeStyles({
     backgroundColor: grayColor[9] + " !important",
     boxShadow:
         "0 4px 20px 0px rgba(" +
-        hexToRgb(blackColor) +
+        hexToRgb(Colours.black) +
         ", 0.14), 0 7px 12px -5px rgba(" +
         hexToRgb(grayColor[9]) +
         ", 0.46)"
