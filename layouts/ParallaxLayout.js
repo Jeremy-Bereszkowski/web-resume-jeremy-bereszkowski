@@ -6,14 +6,13 @@ import Grid from "@material-ui/core/Grid";
 
 import Parallax from "components/Parallax/Parallax";
 
-import {whiteColor} from "assets/jss/nextjs-material-kit-pro";
 import {greenHrThick, parallaxHeaderText} from "assets/jss/coreStyles";
 import {parallaxSubHeaderText} from "assets/jss/coreStyles";
 import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles({
     container: {
-        color: whiteColor,
+        color: Colours.white,
         paddingRight: "15px",
         paddingLeft: "15px",
         paddingBottom: "25px",
