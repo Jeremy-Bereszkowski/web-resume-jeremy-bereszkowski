@@ -12,12 +12,10 @@ import AppBar from "@material-ui/core/AppBar";
 
 import SocialButtonGroup from "../Buttons/SocialButtonGroup";
 
-import {
-  defaultFont, grayColor,
-  hexToRgb, whiteColor,
-} from "assets/jss/nextjs-material-kit-pro";
+import { hexToRgb } from "assets/jss/hexToRgb";
 import Colours from "assets/strings/colours";
 import HeaderData from "assets/data/components/header";
+import {defaultFont} from "assets/jss/coreStyles";
 
 const useStyles = makeStyles({
   appBar: {
@@ -26,9 +24,9 @@ const useStyles = makeStyles({
     borderRadius: "3px",
     padding: "0.625rem 0",
     marginBottom: "20px",
-    color: grayColor[15],
+    color: Colours.grayColor[15],
     width: "100%",
-    backgroundColor: whiteColor,
+    backgroundColor: Colours.white,
     boxShadow:
         "0 4px 18px 0px rgba(" +
         hexToRgb(Colours.black) +
@@ -68,7 +66,7 @@ const useStyles = makeStyles({
       whiteSpace: "nowrap",
       color: "inherit",
     },
-    color: "white",
+    color: Colours.white,
     marginTop: "14px!important",
     marginBottom: "7px!important",
   },
@@ -76,16 +74,16 @@ const useStyles = makeStyles({
     backgroundColor: "transparent !important",
     boxShadow: "none",
     paddingTop: "25px",
-    color: whiteColor
+    color: Colours.white
   },
   dark: {
-    color: whiteColor,
-    backgroundColor: grayColor[9] + " !important",
+    color: Colours.white,
+    backgroundColor: Colours.grayColor[9] + " !important",
     boxShadow:
         "0 4px 20px 0px rgba(" +
         hexToRgb(Colours.black) +
         ", 0.14), 0 7px 12px -5px rgba(" +
-        hexToRgb(grayColor[9]) +
+        hexToRgb(Colours.grayColor[9]) +
         ", 0.46)"
   },
   invisible: {

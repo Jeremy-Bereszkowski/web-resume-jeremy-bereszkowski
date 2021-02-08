@@ -13,7 +13,6 @@ import Projects from "page-sections/landing-page/Projects";
 import SkillsAndTools from "page-sections/landing-page/SkillsAndTools";
 import Hobbies from "page-sections/landing-page/Hobbies";
 
-import {grayColor} from "assets/jss/nextjs-material-kit-pro";
 import data from "assets/data/pages/landing-data"
 import Colours from "assets/strings/colours";
 
@@ -24,7 +23,7 @@ const useStyles = makeStyles({
         zIndex: "7",
     },
     baseBackground: {
-        backgroundColor: grayColor[14],
+        backgroundColor: Colours.grayColor[14],
     },
     lightGreyBackground: {
         backgroundColor: Colours.secondary,

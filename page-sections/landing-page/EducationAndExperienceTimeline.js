@@ -7,15 +7,15 @@ import WorkIcon from '@material-ui/icons/Work';
 import SchoolIcon from '@material-ui/icons/School';
 import StarIcon from '@material-ui/icons/Star';
 import RoomIcon from '@material-ui/icons/Room';
+import Grid from "@material-ui/core/Grid";
 
 import HeaderSubHeaderBody from "components/GridLayouts/HeaderSubHeaderBody";
 
 import useIsTouchDevice from "util/device-detect";
 
-import {grayColor, whiteColor} from "assets/jss/nextjs-material-kit-pro";
+import Colours from "assets/strings/colours";
 
 import 'react-vertical-timeline-component/style.min.css';
-import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles(theme => ({
     location: {
@@ -98,10 +98,10 @@ export default function EducationAndExperienceTimeline(props) {
                         return (
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--education"
-                                contentStyle={{background: grayColor[3], color: whiteColor}}
+                                contentStyle={{background: Colours.grayColor[3], color: Colours.white}}
                                 date={ele.date}
                                 dateClassName={classes.date}
-                                iconStyle={{background: grayColor[ele.color], color: whiteColor}}
+                                iconStyle={{background: Colours.grayColor[ele.color], color: Colours.white}}
                                 icon={icon}
                                 key={key}
                             >
@@ -116,7 +116,7 @@ export default function EducationAndExperienceTimeline(props) {
                         )
                     })}
                     <VerticalTimelineElement
-                        iconStyle={{ background: grayColor[5], color: whiteColor }}
+                        iconStyle={{ background: Colours.grayColor[5], color: Colours.white }}
                         icon={<StarIcon />}
                     />
                 </VerticalTimeline>

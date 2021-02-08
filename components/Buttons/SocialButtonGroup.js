@@ -6,7 +6,7 @@ import {Grid} from "@material-ui/core";
 
 import FooterButton from "./FooterButton";
 
-import {defaultFont} from "assets/jss/nextjs-material-kit-pro";
+import {defaultFont} from "assets/jss/coreStyles";
 import URLS from "assets/strings/urls";
 import Colours from "assets/strings/colours";
 

@@ -5,7 +5,7 @@ import classNames from "classnames"
 import {makeStyles} from "@material-ui/core/styles"
 import Button from "@material-ui/core/Button";
 
-import {grayColor, hexToRgb, whiteColor} from "assets/jss/nextjs-material-kit-pro";
+import {hexToRgb} from "assets/jss/hexToRgb";
 import Colours from "assets/strings/colours";
 
 const useStyles = makeStyles({
@@ -14,11 +14,11 @@ const useStyles = makeStyles({
         minWidth: "auto",
         boxShadow:
             "0 2px 2px 0 rgba(" +
-            hexToRgb(grayColor[0]) +
+            hexToRgb(Colours.grayColor[0]) +
             ", 0.14), 0 3px 1px -2px rgba(" +
-            hexToRgb(grayColor[0]) +
+            hexToRgb(Colours.grayColor[0]) +
             ", 0.2), 0 1px 5px 0 rgba(" +
-            hexToRgb(grayColor[0]) +
+            hexToRgb(Colours.grayColor[0]) +
             ", 0.12)",
         border: "none",
         borderRadius: "3px",
@@ -43,24 +43,24 @@ const useStyles = makeStyles({
     dark: {
         "&,&:focus,&:hover": {
             color: Colours.primary,
-            backgroundColor: grayColor[3]
+            backgroundColor: Colours.grayColor[3]
         },
         "&:hover,&:focus": {
             color: Colours.primary,
-            backgroundColor: whiteColor,
+            backgroundColor: Colours.white,
             boxShadow:
                 "0 14px 26px -12px rgba(" +
-                hexToRgb(grayColor[0]) +
+                hexToRgb(Colours.grayColor[0]) +
                 ", 0.42), 0 4px 23px 0px rgba(" +
                 hexToRgb(Colours.black) +
                 ", 0.12), 0 8px 10px -5px rgba(" +
-                hexToRgb(grayColor[0]) +
+                hexToRgb(Colours.grayColor[0]) +
                 ", 0.2)"
         }
     },
     green: {
         "&,&:focus,&:hover": {
-            color: whiteColor,
+            color: Colours.white,
             backgroundColor: Colours.primary,
         },
         "&:hover,&:focus": {
@@ -68,17 +68,17 @@ const useStyles = makeStyles({
             backgroundColor: Colours.white,
             boxShadow:
                 "0 14px 26px -12px rgba(" +
-                hexToRgb(grayColor[0]) +
+                hexToRgb(Colours.grayColor[0]) +
                 ", 0.42), 0 4px 23px 0px rgba(" +
                 hexToRgb(Colours.black) +
                 ", 0.12), 0 8px 10px -5px rgba(" +
-                hexToRgb(grayColor[0]) +
+                hexToRgb(Colours.grayColor[0]) +
                 ", 0.2)"
         }
     },
     ternary: {
         "&,&:focus,&:hover": {
-            color: whiteColor,
+            color: Colours.white,
             backgroundColor: Colours.ternary,
         },
         "&:hover,&:focus": {
@@ -86,11 +86,11 @@ const useStyles = makeStyles({
             backgroundColor: Colours.white,
             boxShadow:
                 "0 14px 26px -12px rgba(" +
-                hexToRgb(grayColor[0]) +
+                hexToRgb(Colours.grayColor[0]) +
                 ", 0.42), 0 4px 23px 0px rgba(" +
                 hexToRgb(Colours.black) +
                 ", 0.12), 0 8px 10px -5px rgba(" +
-                hexToRgb(grayColor[0]) +
+                hexToRgb(Colours.grayColor[0]) +
                 ", 0.2)"
         }
     },

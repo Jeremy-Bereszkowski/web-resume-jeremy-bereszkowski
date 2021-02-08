@@ -5,12 +5,11 @@ import {makeStyles} from "@material-ui/core/styles";
 import {Grid} from "@material-ui/core";
 
 import SocialButtonGroup from "components/Buttons/SocialButtonGroup";
+import DataLink from "components/Links/ExternalLink";
 
-import {grayColor, whiteColor} from "assets/jss/nextjs-material-kit-pro";
+import {email, phone} from "assets/data/global";
 import FooterData from "assets/data/components/footer";
 import Colours from "assets/strings/colours";
-import {email, phone} from "../../assets/data/global";
-import DataLink from "../Links/ExternalLink";
 
 const useStyles = makeStyles({
     footer: {
@@ -20,7 +19,7 @@ const useStyles = makeStyles({
         paddingLeft: "25px",
         width: "100%",
         "& h4, & h5": {
-            color: whiteColor,
+            color: Colours.white,
             textDecoration: "none"
         },
         position: "absolute",
@@ -36,19 +35,19 @@ const useStyles = makeStyles({
     dark: {
         background:
             "radial-gradient(ellipse at center," +
-            grayColor[4] +
+            Colours.grayColor[4] +
             " 0," +
-            grayColor[5] +
+            Colours.grayColor[5] +
             " 100%)",
         backgroundSize: "550% 450%",
-        color: whiteColor,
+        color: Colours.white,
         "& i": {
-            color: whiteColor
+            color: Colours.white
         },
         "& a, & h3, & h5": {
             opacity: ".86",
             "&:visited": {
-                color: whiteColor
+                color: Colours.white
             },
             "&:focus, &:hover": {
                 opacity: 1
