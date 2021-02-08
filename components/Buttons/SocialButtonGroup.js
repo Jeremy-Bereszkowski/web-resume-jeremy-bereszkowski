@@ -37,7 +37,7 @@ const useStyles = makeStyles({
     },
     link: {
         "&:hover, &:focus": {
-            color: Colours.primary
+            color: Colours.white,
         }
     },
     margin: {
