@@ -1,5 +1,5 @@
 import Colours from "../strings/colours";
-import {blackColor, hexToRgb, whiteColor} from "./nextjs-material-kit-pro";
+import {whiteColor} from "./nextjs-material-kit-pro";
 
 const extraSmallFont = {
     fontSize: "calc(16px + (20 - 16) * ((100vw - 300px) / (3000 - 300)))"
