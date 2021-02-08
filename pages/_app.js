@@ -4,6 +4,9 @@ import App from "next/app";
 import Head from "next/head";
 import Router from "next/router";
 import config from 'react-reveal/globals';
+import { DefaultSeo } from 'next-seo';
+
+import SEO from '../next-seo.config';
 
 import PageChange from "components/PageChange/PageChange.js";
 
