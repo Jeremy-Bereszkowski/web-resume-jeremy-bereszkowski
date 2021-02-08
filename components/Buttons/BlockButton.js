@@ -100,7 +100,18 @@ const BlockButton = React.forwardRef((props, ref) => {
     const {children, color, ...rest} = props
     const classes = useStyles()
 
-    const buttonClasses = color === "dark" ? classNames(classes.button, classes.dark) : color === "ternary" ? classNames(classes.button, classes.ternary) : classNames(classes.button, classes.green)
+    let buttonClasses = classes.button
+    switch (color) {
+        case "dark":
+            buttonClasses = classNames(classes.button, classes.dark);
+            break;
+        case "ternary":
+            buttonClasses = classNames(classes.button, classes.ternary);
+            break;
+        case "green":
+            buttonClasses = classNames(classes.button, classes.green);
+            break;
+    }
 
     return (
         <Button

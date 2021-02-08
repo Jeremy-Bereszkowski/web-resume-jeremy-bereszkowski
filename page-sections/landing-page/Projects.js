@@ -10,6 +10,7 @@ import BlockButton from "components/Buttons/BlockButton";
 import HeaderSubHeaderBody from "components/GridLayouts/HeaderSubHeaderBody";
 
 import Colours from "assets/strings/colours";
+import {grayColor} from "assets/jss/nextjs-material-kit-pro";
 
 import useIsTouchDevice from "util/device-detect";
 
@@ -71,6 +72,7 @@ export default function Projects(props) {
                         return (
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--work"
+                                contentStyle={{ background: grayColor[16] }}
                                 date={ele.date}
                                 dateClassName={classes.date}
                                 iconStyle={{ background: ele.color, color: '#fff' }}
