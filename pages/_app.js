@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "next/app";
-import Head from "next/head";
 import Router from "next/router";
 import config from 'react-reveal/globals';
 import { DefaultSeo } from 'next-seo';
@@ -10,11 +9,13 @@ import SEO from '../next-seo.config';
 
 import PageChange from "components/PageChange/PageChange.js";
 
-import {headerString} from "assets/data/global";
 import "assets/scss/nextjs-material-kit-pro.scss?v=1.1.0";
 import "assets/css/react-demo.css";
 
 import "animate.css/animate.min.css";
+
+/*Config for React-Reveal*/
+config({ ssrFadeout: true });
 
 Router.events.on("routeChangeStart", url => {
     console.log(`Loading: ${url}`);
@@ -33,18 +34,13 @@ Router.events.on("routeChangeError", () => {
     document.body.classList.remove("body-page-transition");
 });
 
-/*Config for React-Reveal*/
-config({ ssrFadeout: true });
-
 export default class MyApp extends App {
     render() {
         const { Component, pageProps } = this.props;
 
         return (
             <>
-                <Head>
-                    <title>{headerString}</title>
-                </Head>
+                <DefaultSeo {...SEO} />
                 <Component {...pageProps} />
             </>
         );
