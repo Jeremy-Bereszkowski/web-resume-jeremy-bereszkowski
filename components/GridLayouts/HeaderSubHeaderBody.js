@@ -64,6 +64,9 @@ export default function HeaderSubHeaderBody(props) {
             className={classes.container}
         >
             <Grid item>
+                <br/>
+            </Grid>
+            <Grid item>
                 <h1 className={headerClass}>
                     {header}
                 </h1>
@@ -75,9 +78,15 @@ export default function HeaderSubHeaderBody(props) {
             </Grid>
             <Grid item>
                 <br/>
+                <br/>
+                <br/>
             </Grid>
             <Grid item>
                 {children}
+            </Grid>
+            <Grid item>
+                <br/>
+                <br/>
             </Grid>
         </Grid>
     )

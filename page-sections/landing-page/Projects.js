@@ -36,8 +36,6 @@ export default function Projects(props) {
             headerColor={"ternary"}
         >
             <br/>
-            <br/>
-            <br/>
             <VerticalTimeline animate={!animate}>
                 {
                     cards.map((ele, key) => {
