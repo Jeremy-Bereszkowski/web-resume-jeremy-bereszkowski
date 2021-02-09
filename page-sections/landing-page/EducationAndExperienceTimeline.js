@@ -53,7 +53,6 @@ export default function EducationAndExperienceTimeline(props) {
         >
             <br/>
             <br/>
-            <br/>
             <div className={classes.border}>
                 <VerticalTimeline animate={!animate}>
                     {cards.map((ele, key) => {
