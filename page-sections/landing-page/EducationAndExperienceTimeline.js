@@ -49,9 +49,7 @@ export default function EducationAndExperienceTimeline(props) {
             header={header}
             subHeader={subHeader}
             headerColor={"light"}
-
         >
-            <br/>
             <br/>
             <div className={classes.border}>
                 <VerticalTimeline animate={!animate}>
