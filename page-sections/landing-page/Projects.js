@@ -20,6 +20,9 @@ const useStyles = makeStyles(theme => ({
         color: Colours.ternary,
         fontWeight: "600!important",
         fontSize: "1rem!important",
+    },
+    border: {
+        padding: "0 10px"
     }
 }))
 
@@ -36,9 +39,9 @@ export default function Projects(props) {
             headerColor={"ternary"}
         >
             <br/>
-            <VerticalTimeline animate={!animate}>
-                {
-                    cards.map((ele, key) => {
+            <div className={classes.border}>
+                <VerticalTimeline animate={!animate}>
+                    {cards.map((ele, key) => {
                         const leftButton = ele.href1 !== undefined ? (
                             <Grid item>
                                 <BlockButton color={"ternary"} href={ele.href1}>
@@ -104,9 +107,9 @@ export default function Projects(props) {
                                 </Grid>
                             </VerticalTimelineElement>
                         )
-                    })
-                }
-            </VerticalTimeline>
+                    })}
+                </VerticalTimeline>
+            </div>
         </HeaderSubHeaderBody>
     )
 }
