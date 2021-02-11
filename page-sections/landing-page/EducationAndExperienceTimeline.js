@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
         opacity: "1",
     },
     border: {
-        padding: "0 20px"
+        padding: "0 10px"
     }
 }))
 
