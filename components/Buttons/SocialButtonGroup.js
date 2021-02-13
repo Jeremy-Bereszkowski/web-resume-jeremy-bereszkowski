@@ -1,53 +1,34 @@
 import React from 'react'
-import classNames from "classnames";
 
-import {makeStyles} from "@material-ui/core/styles";
-import {Grid} from "@material-ui/core";
+import {Grid, Tooltip} from "@material-ui/core";
+
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 
 import FooterButton from "./FooterButton";
 
-import {defaultFont} from "assets/jss/coreStyles";
-import URLS from "assets/strings/urls";
-import Colours from "assets/strings/colours";
+import URLS from "../../assets/strings/urls";
 
-const useStyles = makeStyles({
-    button: {
-        margin: ".312rem 8px",
-        textTransform: "uppercase",
-        letterSpacing: "0",
-        textAlign: "center", whiteSpace: "nowrap",
-        verticalAlign: "middle",
+const data = [
+    {
+        href: URLS.PAPER_RESUME,
+        icon: <CloudDownloadIcon/>,
+        tip: "Download CV",
     },
-    title: {
-        letterSpacing: "unset",
-        "&,& a": {
-            ...defaultFont,
-            minWidth: "unset",
-            lineHeight: "30px",
-            fontSize: "20px",
-            fontWeight: "400",
-            borderRadius: "3px",
-            textTransform: "none",
-            whiteSpace: "nowrap",
-            color: "inherit",
-        },
-        color: "white",
-        marginTop: "12px!important",
-        marginBottom: "8px!important",
+    {
+        href: URLS.LINKEDIN_PROFILE,
+        icon: <LinkedInIcon/>,
+        tip: "LinkedIn Profile",
     },
-    link: {
-        "&:hover, &:focus": {
-            color: Colours.white,
-        }
-    },
-    margin: {
-        marginLeft: "4px",
+    {
+        href: URLS.GITHUB_PROFILE,
+        icon: <GitHubIcon/>,
+        tip: "GitHub Profile",
     }
-});
+]
 
 export default function SocialButtonGroup() {
-    const classes = useStyles();
-
     return (
         <Grid
             container
@@ -56,36 +37,19 @@ export default function SocialButtonGroup() {
             alignContent={"center"}
             alignItems={"center"}
         >
-            <Grid item>
-                <h2 className={classNames(classes.title, classes.button)}>
-                    <a
-                        className={classNames(classes.link, classes.margin)}
-                        href={URLS.PAPER_RESUME}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        CV
-                    </a>
-                </h2>
-            </Grid>
-            <Grid item>
-                <FooterButton
-                    href="https://www.linkedin.com/in/jeremy-bereszkowski-999ba016a/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <i className="fab fa-linkedin-in"/>
-                </FooterButton>
-            </Grid>
-            <Grid item>
-                <FooterButton
-                    href="https://github.com/s3539822"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <i className="fab fa-github"/>
-                </FooterButton>
-            </Grid>
+            {data.map((ele, key) =>
+                <Grid item key={key}>
+                    <Tooltip title={ele.tip}>
+                        <FooterButton
+                            href={ele.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {ele.icon}
+                        </FooterButton>
+                    </Tooltip>
+                </Grid>
+            )}
         </Grid>
     )
 }
